@@ -23,3 +23,12 @@ BINARYEN_ROOT="/root/emsdk/upstream/bin"
 ```
 
 Next, ensure that the environment varibale `EM_CONFIG` is set to `/root/.emscripten` (if not set it).
+
+
+## Compilation
+
+To compile a C/C++ source (that uses emsdk) to LLVM IR and then to boogie:
+```
+$ clang++ `em++ --cflags` -emit-llvm -S <filename>.cpp -o <filename>.ll
+$ smack --no-verify --clang-options="`em++ --cflags`" -bpl <filename>.bpl <filename>.ll
+```
