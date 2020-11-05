@@ -23,8 +23,8 @@ RUN sudo bin/build.sh
 WORKDIR /root
 RUN git clone https://github.com/emscripten-core/emsdk.git $EMSDKDIR
 WORKDIR $EMSDKDIR
-RUN ./emsdk install latest
-RUN ./emsdk activate latest
+RUN ./emsdk install 1.39.6
+RUN ./emsdk activate 1.39.6
 
 # Add envinronment
 RUN echo "source /root/smack.environment" >> ~/.bashrc
