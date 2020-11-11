@@ -26,6 +26,9 @@ WORKDIR $EMSDKDIR
 RUN ./emsdk install 1.39.6
 RUN ./emsdk activate 1.39.6
 
+WORKDIR /root
+RUN git clone https://github.com/emscripten-core/emscripten.git $EMSCRIPTENDIR
+
 # Add envinronment
 RUN echo "source /root/smack.environment" >> ~/.bashrc
 RUN echo "source /root/emsdk/emsdk_env.sh" >> ~/.bashrc
