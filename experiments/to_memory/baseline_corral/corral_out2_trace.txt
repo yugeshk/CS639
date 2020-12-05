@@ -1,0 +1,27 @@
+0 "?" 0 false ^ Call "OS" "main"
+50 "corral_out2.bpl" 6152 true ^==^^== Atomic Assignment
+51 "corral_out2.bpl" 6153 true ^==^^== Atomic Assignment
+52 "corral_out2.bpl" 6154 true ^==^^== Atomic Assignment
+53 "corral_out2.bpl" 6155 true ^==^^== Atomic Assignment
+54 "corral_out2.bpl" 6156 true ^==^^== Atomic Assignment
+55 "corral_out2.bpl" 6157 true ^==^^== Atomic Assignment
+56 "corral_out2.bpl" 6158 true ^==^^== Atomic Assignment
+57 "corral_out2.bpl" 6159 true ^==^^== Atomic Assignment
+58 "corral_out2.bpl" 6160 true ^==^^== Atomic Assignment
+59 "corral_out2.bpl" 6163 true ^==^^== Atomic Assignment
+60 "corral_out2.bpl" 6164 true ^==^^== Atomic Assignment
+61 "corral_out2.bpl" 6165 true ^==^^== Atomic Assignment
+62 "corral_out2.bpl" 6166 true ^==^^== Atomic Assignment
+63 "corral_out2.bpl" 6169 true ^==^^== Atomic Assignment
+64 "corral_out2.bpl" 6170 true ^==^^== Atomic Assignment
+65 "corral_out2.bpl" 6171 true ^==^^== Atomic Assignment
+66 "corral_out2.bpl" 6172 true ^==^^== Atomic Assignment
+67 "corral_out2.bpl" 6173 true ^==^^== Atomic Assignment
+68 "corral_out2.bpl" 6174 true ^==^^== Atomic Assignment
+69 "corral_out2.bpl" 6175 true ^==^CALL___SMACK_check_memory_safety^== Atomic Assignment
+70 "corral_out2.bpl" 6881 true ^==^^== Atomic Assignment
+71 "corral_out2.bpl" 6882 true ^==^^== Atomic Assignment
+72 "corral_out2.bpl" 6883 true ^==^^== Atomic Assignment
+73 "corral_out2.bpl" 6884 true ^==^ASSERTION_FAILS_assert_{:valid_deref}_$sle.ref.bool($add.ref(p,_size),_$add.ref($base(p),_$Size($base(p))));^_^== Atomic Assignment
+74 "corral_out2.bpl" 6175 true ^==^RETURN_from___SMACK_check_memory_safety_^== Atomic Assignment
+75 "corral_out2.bpl" 6175 true ^==^Done^== Atomic Assignment
