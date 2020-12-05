@@ -1,0 +1,5 @@
+Entrypoint : Main
+CallBackFunctionsPresent : None
+Changes Made to bpl file manually : None
+Command For Corral : corral custom_em_js_test.bpl
+Bug Found : Null Free bug on line 20.

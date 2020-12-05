@@ -1,0 +1,11 @@
+Entrypoint : main
+CallBackFunctionsPresent : none
+Changes Made to bpl file manually : added {:inline} attribute to $free and $SMACK_check_memory_safety
+
+
+Command 
+corral /tryCTrace /cex:7 html5_webgl.bpl
+
+
+Bug Found : 
+

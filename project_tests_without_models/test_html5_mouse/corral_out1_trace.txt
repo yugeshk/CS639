@@ -1,0 +1,37 @@
+s
+#
+1 1 3 1 c
+1 1 6 37 mouse_callback|test_html5_mouse.c|73|
+1 6 3 1 c
+1 6 6 37 mouse_callback|test_html5_mouse.c|73|
+1 6 4 36 CALL emscripten_event_type_to_string
+1 7 3 1 c
+1 7 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 10 3 1 c
+1 10 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 10 4 11 CALL $alloc
+1 27 3 1 c
+1 27 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 27 4 19 RETURN from $alloc 
+1 28 3 1 c
+1 28 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 35 3 1 c
+1 35 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 35 4 32 CALL __SMACK_check_memory_safety
+1 40 3 1 c
+1 40 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 40 4 40 RETURN from __SMACK_check_memory_safety 
+1 41 3 1 c
+1 41 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 43 3 1 c
+1 43 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 43 4 32 CALL __SMACK_check_memory_safety
+1 46 3 1 c
+1 46 6 91 emscripten_event_type_to_string|test_html5_mouse.c|26|mouse_callback|test_html5_mouse.c|73|
+1 46 4 40 RETURN from __SMACK_check_memory_safety 
+1 47 3 1 c
+1 47 6 37 mouse_callback|test_html5_mouse.c|73|
+1 47 4 44 RETURN from emscripten_event_type_to_string 
+1 48 3 1 c
+1 48 6 37 mouse_callback|test_html5_mouse.c|73|
+1 48 4 4 Done

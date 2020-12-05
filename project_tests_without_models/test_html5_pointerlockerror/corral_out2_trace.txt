@@ -1,0 +1,13 @@
+s
+#
+1 1 3 1 c
+1 1 6 48 click_callback|test_html5_pointerlockerror.c|44|
+1 9 3 1 c
+1 9 6 48 click_callback|test_html5_pointerlockerror.c|44|
+1 9 4 32 CALL __SMACK_check_memory_safety
+1 14 3 1 c
+1 14 6 48 click_callback|test_html5_pointerlockerror.c|44|
+1 14 4 40 RETURN from __SMACK_check_memory_safety 
+1 15 3 1 c
+1 15 6 48 click_callback|test_html5_pointerlockerror.c|44|
+1 15 4 4 Done

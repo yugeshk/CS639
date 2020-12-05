@@ -1,0 +1,13 @@
+Entrypoint : Main
+CallBackFunctionsPresent : mouse_callback, wheel_callback
+Changes Made to bpl file manually : Made 2 additiional bpl files with  different entrypoints.
+
+
+Command 
+easy to write
+
+
+Bug Found : 
+No bug in main function.
+False null dereference on line 42 in gamepad_callback
+False null dereference on line 70 in main_loop

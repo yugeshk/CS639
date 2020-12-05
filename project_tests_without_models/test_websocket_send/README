@@ -1,0 +1,15 @@
+Entrypoint : Main
+CallBackFunctionsPresent : websocket_open, close, error, message
+Changes Made to bpl file manually : Made 4 additiional bpl files with  different entrypoints.
+
+
+Command 
+
+
+
+Bug Found : 
+No bug in main function.
+False null dereference on line 9 in websocketOpen.
+"                       "      20 in websocketClose.
+"                       "      43 in websocketMessage.
+

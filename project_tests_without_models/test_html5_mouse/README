@@ -1,0 +1,15 @@
+Entrypoint : Main
+CallBackFunctionsPresent : mouse_callback, wheel_callback
+Changes Made to bpl file manually : Made 2 additiional bpl files with  different entrypoints.
+
+
+Command 
+corral /tryCTrace /cex:20 test_html5_mouse_mouse_callback.bpl
+corral /tryCTrace /cex:20 test_html5_mouse_wheel_callback.bpl
+corral /tryCTrace /cex:20 test_html5_mouse.bpl
+
+
+Bug Found : 
+No bug in main function.
+False null dereference on line 73 in mouse_callback.
+False null dereference on line 100 in wheel_callback.

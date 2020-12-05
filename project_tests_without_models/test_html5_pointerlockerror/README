@@ -1,0 +1,15 @@
+Entrypoint : Main
+CallBackFunctionsPresent : pointer_click_callback, pointerlockchange_callback, pointerlockerror_callback.
+
+Changes Made to bpl file manually : Made 3 additiional bpl files with  different entrypoints.
+
+
+Command 
+corral /cex:20 /tryCTrace test_html5_pointer_click_callback.b
+pl 
+
+
+
+Bug Found : 
+No bug in main function.
+false invalid dereference in line 44.
