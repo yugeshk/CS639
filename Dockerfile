@@ -34,7 +34,7 @@ RUN git clone https://github.com/emscripten-core/emscripten.git $EMSCRIPTENDIR
 #Setup AV
 WORKDIR /root
 RUN git clone https://github.com/boogie-org/corral.git -b v1.0.12 $CORRALDIR
-WORKDIR cd $CORRALDIR
+WORKDIR $CORRALDIR
 RUN git submodule init
 RUN git submodule update
 RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb

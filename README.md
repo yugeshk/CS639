@@ -32,3 +32,7 @@ To compile a C/C++ source (that uses emsdk) to LLVM IR and then to boogie:
 $ clang++ `em++ --cflags` -emit-llvm -S <filename>.cpp -o <filename>.ll
 $ smack --no-verify --clang-options="`em++ --cflags`" -bpl <filename>.bpl <filename>.ll
 ```
+
+## Running Benchmarks
+
+For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments.
