@@ -1,0 +1,295 @@
+Warning: Using default recursion bound of 1
+[TAG: AV_OUTPUT] ----- Analyzing html5_webgl.harness.bpl ------
+[TAG: AV_STATS] #Procs : 22
+[TAG: AV_STATS] #Asserts : 7
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 0 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 115.86 seconds
+
+Boogie verification time: 114.21 s
+Time spent reading-writing programs: 1.77 s
+
+Time spent checking a program (1): 27.47 s
+Time spent checking a path (1): 88.37 s
+
+Number of procedures inlined: 177
+Time elapsed so far: 115.950136
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/27
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = html5_webgl.c, sourceLine = 43, 
+		 assert assertsPassed;
+	assertsPassed := $eq.ref.bool($base(inline$$free_trace_1_trace_1$0$p), inline$$free_trace_1_trace_1$0$p);
+	inline$$free_trace_1_trace_1$0$p := inline$free__trace_1_trace_1$0$$p0;
+	inline$free__trace_1_trace_1$0$$p0 := inline$main_trace_1_trace_1$0$$p17;
+
+	#### sourceFile = html5_webgl.c, sourceLine = 39, 
+		 inline$main_trace_1_trace_1$0$$p17 := inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r;
+	inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r := alloc_$r__311;
+
+..Atom:!$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)	
+ Filtered atoms before true/false = !$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)
+..
+ Filtered atoms = !$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)
+.
+ Found a conjunctive cube cover !$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$eq.ref.bool($base(alloc_$r__311), alloc_$r__311), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$eq.ref.bool($base(alloc_$r__311), alloc_$r__311)
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj1 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $base(alloc_$r__311)
+	complex-obj1 ==> $eq.ref.bool(complex-obj0, alloc_$r__311)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj1	)
+[TAG: AV_DEBUG] List of used vars in $eq.ref.bool($base(alloc_$r__311), alloc_$r__311) => alloc_$r__311
+[TAG: AV_DEBUG] The substituted expression for $eq.ref.bool($base(alloc_$r__311), alloc_$r__311) is $eq.ref.bool($base(x_15), x_15)
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_15: ref :: unknownTrigger_3(x_15) ==> $eq.ref.bool($base(x_15), x_15))
+Printing trace Trace0
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 1 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.88 seconds
+CorralMain CorralMainStart 13
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.46 seconds
+Inconsistency check took: 1.76 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 90.81 seconds
+
+Boogie verification time: 289.50 s
+Time spent reading-writing programs: 5.77 s
+
+Time spent checking a program (4): 30.09 s
+Time spent checking a path (3): 177.89 s
+
+Number of procedures inlined: 178
+Time elapsed so far: 298.533072
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/27
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = html5_webgl.c, sourceLine = 43, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[inline$$free_trace_1_trace_1$0$p];
+	inline$$free_trace_1_trace_1$0$p := inline$free__trace_1_trace_1$0$$p0;
+	inline$free__trace_1_trace_1$0$$p0 := inline$main_trace_1_trace_1$0$$p17;
+
+	#### sourceFile = html5_webgl.c, sourceLine = 39, 
+		 inline$main_trace_1_trace_1$0$$p17 := inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r;
+	inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r := alloc_$r__626;
+
+	#### sourceFile = html5_webgl.c, sourceLine = 31, 
+		 $Alloc[inline$$alloc_trace_6_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_6_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$Alloc[inline$$alloc_trace_5_trace_1$0$inline$$$alloc$0$p] := true;
+	$CurrAddr := inline$$alloc_trace_5_trace_1$0$cmdloc_dummy_var_6;
+	inline$$alloc_trace_5_trace_1$0$cmdloc_dummy_var_6 := inline$havocNonDetAvh.ref_trace_10_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_10_trace_1$0$o := alloc_o__614;
+	inline$$alloc_trace_5_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$Alloc[inline$$alloc_trace_4_trace_1$0$inline$$$alloc$0$p] := true;
+	$CurrAddr := inline$$alloc_trace_4_trace_1$0$cmdloc_dummy_var_6;
+	inline$$alloc_trace_4_trace_1$0$cmdloc_dummy_var_6 := inline$havocNonDetAvh.ref_trace_8_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_8_trace_1$0$o := alloc_o__606;
+	inline$$alloc_trace_4_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$Alloc[inline$$alloc_trace_3_trace_1$0$inline$$$alloc$0$p] := true;
+	$CurrAddr := inline$$alloc_trace_3_trace_1$0$cmdloc_dummy_var_6;
+	inline$$alloc_trace_3_trace_1$0$cmdloc_dummy_var_6 := inline$havocNonDetAvh.ref_trace_6_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_6_trace_1$0$o := alloc_o__598;
+	inline$$alloc_trace_3_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$Alloc[inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p] := true;
+	$CurrAddr := inline$$alloc_trace_2_trace_1$0$cmdloc_dummy_var_6;
+	inline$$alloc_trace_2_trace_1$0$cmdloc_dummy_var_6 := inline$havocNonDetAvh.ref_trace_4_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_4_trace_1$0$o := alloc_o__590;
+	inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	$CurrAddr := inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_6;
+	inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_6 := inline$havocNonDetAvh.ref_trace_2_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_2_trace_1$0$o := alloc_o__582;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+********************************************************************************************************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:alloc_$r__626 != alloc_o__614	Atom:alloc_$r__626 != alloc_o__606	Atom:alloc_$r__626 != alloc_o__598	Atom:alloc_$r__626 != alloc_o__590	Atom:alloc_$r__626 != alloc_o__582	Atom:alloc_$r__626 != $1024.ref	Atom:alloc_$r__626 != __SMACK_static_init	Atom:alloc_$r__626 != llvm.dbg.value	Atom:alloc_$r__626 != __SMACK_nondet_signed_long_long_int	Atom:alloc_$r__626 != __SMACK_nondet_signed_long_long	Atom:alloc_$r__626 != __SMACK_nondet_long_long_int	Atom:alloc_$r__626 != __SMACK_nondet_long_long	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_int	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long	Atom:alloc_$r__626 != __SMACK_nondet_signed_long_int	Atom:alloc_$r__626 != __SMACK_nondet_signed_long	Atom:alloc_$r__626 != __SMACK_nondet_long_int	Atom:alloc_$r__626 != __SMACK_nondet_long	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_int	Atom:alloc_$r__626 != __SMACK_nondet_unsigned	Atom:alloc_$r__626 != __SMACK_nondet_int	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_short_int	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_short	Atom:alloc_$r__626 != __SMACK_nondet_signed_short_int	Atom:alloc_$r__626 != __SMACK_nondet_signed_short	Atom:alloc_$r__626 != __SMACK_nondet_short	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_char	Atom:alloc_$r__626 != __SMACK_nondet_signed_char	Atom:alloc_$r__626 != __SMACK_nondet_signed_int	Atom:alloc_$r__626 != __SMACK_nondet_char	Atom:alloc_$r__626 != __SMACK_check_overflow	Atom:alloc_$r__626 != __SMACK_dummy	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_long_int	Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_long	Atom:alloc_$r__626 != __SMACK_code	Atom:alloc_$r__626 != __VERIFIER_assume	Atom:alloc_$r__626 != emscripten_webgl_get_uniform_v	Atom:alloc_$r__626 != emscripten_webgl_get_uniform_d	Atom:alloc_$r__626 != emscripten_webgl_get_program_info_log_utf8	Atom:alloc_$r__626 != emscripten_webgl_get_program_parameter_d	Atom:alloc_$r__626 != emscripten_webgl_get_shader_info_log_utf8	Atom:alloc_$r__626 != emscripten_webgl_get_shader_source_utf8	Atom:alloc_$r__626 != emscripten_webgl_get_shader_parameter_d	Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_o	Atom:alloc_$r__626 != glVertexAttribPointer	Atom:alloc_$r__626 != glBufferData	Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_v	Atom:alloc_$r__626 != glVertexAttrib4f	Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_d	Atom:alloc_$r__626 != glEnableVertexAttribArray	Atom:alloc_$r__626 != emscripten_webgl_get_parameter_v	Atom:alloc_$r__626 != llvm.memset.p0i8.i32	Atom:alloc_$r__626 != glViewport	Atom:alloc_$r__626 != emscripten_webgl_get_parameter_i64v	Atom:alloc_$r__626 != emscripten_webgl_get_parameter_utf8	Atom:alloc_$r__626 != emscripten_webgl_get_parameter_o	Atom:alloc_$r__626 != glBindBuffer	Atom:alloc_$r__626 != glGenBuffers	Atom:alloc_$r__626 != emscripten_webgl_get_parameter_d	Atom:alloc_$r__626 != free_	Atom:alloc_$r__626 != __SMACK_init_func_memory_model	Atom:alloc_$r__626 != __SMACK_check_memory_leak	Atom:alloc_$r__626 != __SMACK_check_memory_safety	Atom:alloc_$r__626 != __SMACK_top_decl	Atom:alloc_$r__626 != __SMACK_decls	Atom:alloc_$r__626 != glCreateProgram	Atom:alloc_$r__626 != create_program	Atom:alloc_$r__626 != errno_global	Atom:alloc_$r__626 != .str.1.81	Atom:alloc_$r__626 != .str.80	Atom:alloc_$r__626 != .str.2.79	Atom:alloc_$r__626 != env_value_str	Atom:alloc_$r__626 != .str.25.78	Atom:alloc_$r__626 != .str.24.77	Atom:alloc_$r__626 != glUniform4f	Atom:alloc_$r__626 != glUniform1f	Atom:alloc_$r__626 != glGetUniformLocation	Atom:alloc_$r__626 != glUseProgram	Atom:alloc_$r__626 != .str.53	Atom:alloc_$r__626 != .str.52	Atom:alloc_$r__626 != .str.51	Atom:alloc_$r__626 != .str.50	Atom:alloc_$r__626 != .str.49	Atom:alloc_$r__626 != .str.48	Atom:alloc_$r__626 != .str.47	Atom:alloc_$r__626 != .str.46	Atom:alloc_$r__626 != .str.45	Atom:alloc_$r__626 != strstr	Atom:alloc_$r__626 != strlen	Atom:alloc_$r__626 != __assert_fail	Atom:alloc_$r__626 != emscripten_webgl_get_supported_extensions	Atom:alloc_$r__626 != emscripten_webgl_make_context_current	Atom:alloc_$r__626 != emscripten_webgl_create_context	Atom:alloc_$r__626 != emscripten_webgl_init_context_attributes	Atom:alloc_$r__626 != .str.44	Atom:alloc_$r__626 != main	Atom:alloc_$r__626 != glLinkProgram	Atom:alloc_$r__626 != glBindAttribLocation	Atom:alloc_$r__626 != glAttachShader	Atom:alloc_$r__626 != .str.43	Atom:alloc_$r__626 != .str.42	Atom:alloc_$r__626 != .str.41	Atom:alloc_$r__626 != .str.40	Atom:alloc_$r__626 != .str.39	Atom:alloc_$r__626 != .str.38	Atom:alloc_$r__626 != .str.37	Atom:alloc_$r__626 != main.fragment_shader	Atom:alloc_$r__626 != .str.36	Atom:alloc_$r__626 != .str.35	Atom:alloc_$r__626 != main.failing_shader	Atom:alloc_$r__626 != .str.34	Atom:alloc_$r__626 != .str.33	Atom:alloc_$r__626 != .str.32	Atom:alloc_$r__626 != .str.31	Atom:alloc_$r__626 != .str.30	Atom:alloc_$r__626 != .str.29	Atom:alloc_$r__626 != main.vertex_shader	Atom:alloc_$r__626 != .str.28	Atom:alloc_$r__626 != .str.27	Atom:alloc_$r__626 != .str.26	Atom:alloc_$r__626 != .str.25	Atom:alloc_$r__626 != .str.24	Atom:alloc_$r__626 != .str.23	Atom:alloc_$r__626 != .str.22	Atom:alloc_$r__626 != .str.21	Atom:alloc_$r__626 != .str.20	Atom:alloc_$r__626 != .str.19	Atom:alloc_$r__626 != .str.18	Atom:alloc_$r__626 != .str.17	Atom:alloc_$r__626 != .str.16	Atom:alloc_$r__626 != .str.15	Atom:alloc_$r__626 != .str.14	Atom:alloc_$r__626 != .str.13	Atom:alloc_$r__626 != .str.12	Atom:alloc_$r__626 != .str.11	Atom:alloc_$r__626 != .str.10	Atom:alloc_$r__626 != .str.3	Atom:alloc_$r__626 != .str.2	Atom:alloc_$r__626 != .str	Atom:alloc_$r__626 != .str.8	Atom:alloc_$r__626 != .str.7	Atom:alloc_$r__626 != .str.6	Atom:alloc_$r__626 != .str.4	Atom:alloc_$r__626 != .str.9	Atom:alloc_$r__626 != .str.1	Atom:alloc_$r__626 != .str.5	Atom:alloc_$r__626 != __func__.main	Atom:alloc_$r__626 != glCompileShader	Atom:alloc_$r__626 != glShaderSource	Atom:alloc_$r__626 != glCreateShader	Atom:alloc_$r__626 != compile_shader	Atom:alloc_$r__626 != llvm.dbg.declare	Atom:!$Alloc[alloc_$r__626]	
+ Filtered atoms before true/false = !$Alloc[alloc_$r__626]
+..
+ Filtered atoms = !$Alloc[alloc_$r__626]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+........................................................................................................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:alloc_$r__626 != alloc_o__614	..Atom:alloc_$r__626 != alloc_o__606	..Atom:alloc_$r__626 != alloc_o__598	..Atom:alloc_$r__626 != alloc_o__590	..Atom:alloc_$r__626 != alloc_o__582	..Atom:alloc_$r__626 != $1024.ref	..Atom:alloc_$r__626 != __SMACK_static_init	..Atom:alloc_$r__626 != llvm.dbg.value	..Atom:alloc_$r__626 != __SMACK_nondet_signed_long_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_signed_long_long	..Atom:alloc_$r__626 != __SMACK_nondet_long_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_long_long	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long	..Atom:alloc_$r__626 != __SMACK_nondet_signed_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_signed_long	..Atom:alloc_$r__626 != __SMACK_nondet_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_long	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_int	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned	..Atom:alloc_$r__626 != __SMACK_nondet_int	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_short_int	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_short	..Atom:alloc_$r__626 != __SMACK_nondet_signed_short_int	..Atom:alloc_$r__626 != __SMACK_nondet_signed_short	..Atom:alloc_$r__626 != __SMACK_nondet_short	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_char	..Atom:alloc_$r__626 != __SMACK_nondet_signed_char	..Atom:alloc_$r__626 != __SMACK_nondet_signed_int	..Atom:alloc_$r__626 != __SMACK_nondet_char	..Atom:alloc_$r__626 != __SMACK_check_overflow	..Atom:alloc_$r__626 != __SMACK_dummy	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_long_int	..Atom:alloc_$r__626 != __SMACK_nondet_unsigned_long_long	..Atom:alloc_$r__626 != __SMACK_code	..Atom:alloc_$r__626 != __VERIFIER_assume	..Atom:alloc_$r__626 != emscripten_webgl_get_uniform_v	..Atom:alloc_$r__626 != emscripten_webgl_get_uniform_d	..Atom:alloc_$r__626 != emscripten_webgl_get_program_info_log_utf8	..Atom:alloc_$r__626 != emscripten_webgl_get_program_parameter_d	..Atom:alloc_$r__626 != emscripten_webgl_get_shader_info_log_utf8	..Atom:alloc_$r__626 != emscripten_webgl_get_shader_source_utf8	..Atom:alloc_$r__626 != emscripten_webgl_get_shader_parameter_d	..Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_o	..Atom:alloc_$r__626 != glVertexAttribPointer	..Atom:alloc_$r__626 != glBufferData	..Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_v	..Atom:alloc_$r__626 != glVertexAttrib4f	..Atom:alloc_$r__626 != emscripten_webgl_get_vertex_attrib_d	..Atom:alloc_$r__626 != glEnableVertexAttribArray	..Atom:alloc_$r__626 != emscripten_webgl_get_parameter_v	..Atom:alloc_$r__626 != llvm.memset.p0i8.i32	..Atom:alloc_$r__626 != glViewport	..Atom:alloc_$r__626 != emscripten_webgl_get_parameter_i64v	..Atom:alloc_$r__626 != emscripten_webgl_get_parameter_utf8	..Atom:alloc_$r__626 != emscripten_webgl_get_parameter_o	..Atom:alloc_$r__626 != glBindBuffer	..Atom:alloc_$r__626 != glGenBuffers	..Atom:alloc_$r__626 != emscripten_webgl_get_parameter_d	..Atom:alloc_$r__626 != free_	..Atom:alloc_$r__626 != __SMACK_init_func_memory_model	..Atom:alloc_$r__626 != __SMACK_check_memory_leak	..Atom:alloc_$r__626 != __SMACK_check_memory_safety	..Atom:alloc_$r__626 != __SMACK_top_decl	..Atom:alloc_$r__626 != __SMACK_decls	..Atom:alloc_$r__626 != glCreateProgram	..Atom:alloc_$r__626 != create_program	..Atom:alloc_$r__626 != errno_global	..Atom:alloc_$r__626 != .str.1.81	..Atom:alloc_$r__626 != .str.80	..Atom:alloc_$r__626 != .str.2.79	..Atom:alloc_$r__626 != env_value_str	..Atom:alloc_$r__626 != .str.25.78	..Atom:alloc_$r__626 != .str.24.77	..Atom:alloc_$r__626 != glUniform4f	..Atom:alloc_$r__626 != glUniform1f	..Atom:alloc_$r__626 != glGetUniformLocation	..Atom:alloc_$r__626 != glUseProgram	..Atom:alloc_$r__626 != .str.53	..Atom:alloc_$r__626 != .str.52	..Atom:alloc_$r__626 != .str.51	..Atom:alloc_$r__626 != .str.50	..Atom:alloc_$r__626 != .str.49	..Atom:alloc_$r__626 != .str.48	..Atom:alloc_$r__626 != .str.47	..Atom:alloc_$r__626 != .str.46	..Atom:alloc_$r__626 != .str.45	..Atom:alloc_$r__626 != strstr	..Atom:alloc_$r__626 != strlen	..Atom:alloc_$r__626 != __assert_fail	..Atom:alloc_$r__626 != emscripten_webgl_get_supported_extensions	..Atom:alloc_$r__626 != emscripten_webgl_make_context_current	..Atom:alloc_$r__626 != emscripten_webgl_create_context	..Atom:alloc_$r__626 != emscripten_webgl_init_context_attributes	..Atom:alloc_$r__626 != .str.44	..Atom:alloc_$r__626 != main	..Atom:alloc_$r__626 != glLinkProgram	..Atom:alloc_$r__626 != glBindAttribLocation	..Atom:alloc_$r__626 != glAttachShader	..Atom:alloc_$r__626 != .str.43	..Atom:alloc_$r__626 != .str.42	..Atom:alloc_$r__626 != .str.41	..Atom:alloc_$r__626 != .str.40	..Atom:alloc_$r__626 != .str.39	..Atom:alloc_$r__626 != .str.38	..Atom:alloc_$r__626 != .str.37	..Atom:alloc_$r__626 != main.fragment_shader	..Atom:alloc_$r__626 != .str.36	..Atom:alloc_$r__626 != .str.35	..Atom:alloc_$r__626 != main.failing_shader	..Atom:alloc_$r__626 != .str.34	..Atom:alloc_$r__626 != .str.33	..Atom:alloc_$r__626 != .str.32	..Atom:alloc_$r__626 != .str.31	..Atom:alloc_$r__626 != .str.30	..Atom:alloc_$r__626 != .str.29	..Atom:alloc_$r__626 != main.vertex_shader	..Atom:alloc_$r__626 != .str.28	..Atom:alloc_$r__626 != .str.27	..Atom:alloc_$r__626 != .str.26	..Atom:alloc_$r__626 != .str.25	..Atom:alloc_$r__626 != .str.24	..Atom:alloc_$r__626 != .str.23	..Atom:alloc_$r__626 != .str.22	..Atom:alloc_$r__626 != .str.21	..Atom:alloc_$r__626 != .str.20	..Atom:alloc_$r__626 != .str.19	..Atom:alloc_$r__626 != .str.18	..Atom:alloc_$r__626 != .str.17	..Atom:alloc_$r__626 != .str.16	..Atom:alloc_$r__626 != .str.15	..Atom:alloc_$r__626 != .str.14	..Atom:alloc_$r__626 != .str.13	..Atom:alloc_$r__626 != .str.12	..Atom:alloc_$r__626 != .str.11	..Atom:alloc_$r__626 != .str.10	..Atom:alloc_$r__626 != .str.3	..Atom:alloc_$r__626 != .str.2	..Atom:alloc_$r__626 != .str	..Atom:alloc_$r__626 != .str.8	..Atom:alloc_$r__626 != .str.7	..Atom:alloc_$r__626 != .str.6	..Atom:alloc_$r__626 != .str.4	..Atom:alloc_$r__626 != .str.9	..Atom:alloc_$r__626 != .str.1	..Atom:alloc_$r__626 != .str.5	..Atom:alloc_$r__626 != __func__.main	..Atom:alloc_$r__626 != glCompileShader	..Atom:alloc_$r__626 != glShaderSource	..Atom:alloc_$r__626 != glCreateShader	..Atom:alloc_$r__626 != compile_shader	..Atom:alloc_$r__626 != llvm.dbg.declare	..Atom:!$Alloc[alloc_$r__626]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[alloc_$r__626], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[alloc_$r__626]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj0 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $Alloc[alloc_$r__626]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj0	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[alloc_$r__626] => $Alloc, alloc_$r__626
+[TAG: AV_DEBUG] The substituted expression for $Alloc[alloc_$r__626] is $Alloc[x_15]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_15: ref :: unknownTrigger_3(x_15) ==> $Alloc[x_15])
+Printing trace Trace1
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 2 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.83 seconds
+CorralMain CorralMainStart 15
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.45 seconds
+Inconsistency check took: 1.72 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 91.86 seconds
+
+Boogie verification time: 470.83 s
+Time spent reading-writing programs: 9.76 s
+
+Time spent checking a program (7): 32.84 s
+Time spent checking a path (5): 268.29 s
+
+Number of procedures inlined: 178
+Time elapsed so far: 526.150257
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/27
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = html5_webgl.c, sourceLine = 43, 
+		 assert assertsPassed;
+	assertsPassed := $slt.ref.bool($0.ref, inline$$free_trace_1_trace_1$0$p);
+	inline$$free_trace_1_trace_1$0$p := inline$free__trace_1_trace_1$0$$p0;
+	inline$free__trace_1_trace_1$0$$p0 := inline$main_trace_1_trace_1$0$$p17;
+
+	#### sourceFile = html5_webgl.c, sourceLine = 39, 
+		 inline$main_trace_1_trace_1$0$$p17 := inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r;
+	inline$emscripten_webgl_get_supported_extensions_trace_1_trace_1$0$$r := alloc_$r__941;
+
+..Atom:!$slt.ref.bool($0.ref, alloc_$r__941)	
+ Filtered atoms before true/false = !$slt.ref.bool($0.ref, alloc_$r__941)
+..
+ Filtered atoms = !$slt.ref.bool($0.ref, alloc_$r__941)
+.
+ Found a conjunctive cube cover !$slt.ref.bool($0.ref, alloc_$r__941)
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$slt.ref.bool($0.ref, alloc_$r__941)	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$slt.ref.bool($0.ref, alloc_$r__941), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$slt.ref.bool($0.ref, alloc_$r__941)
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj0 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $slt.ref.bool($0.ref, alloc_$r__941)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj0	)
+[TAG: AV_DEBUG] List of used vars in $slt.ref.bool($0.ref, alloc_$r__941) => $0.ref, alloc_$r__941
+[TAG: AV_DEBUG] The substituted expression for $slt.ref.bool($0.ref, alloc_$r__941) is $slt.ref.bool($0.ref, x_15)
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_15: ref :: unknownTrigger_3(x_15) ==> $slt.ref.bool($0.ref, x_15))
+Printing trace Trace2
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 3 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.84 seconds
+CorralMain CorralMainStart 17
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.47 seconds
+Inconsistency check took: 1.73 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.54 seconds
+
+Boogie verification time: 556.13 s
+Time spent reading-writing programs: 13.09 s
+
+Time spent checking a program (10): 34.35 s
+Time spent checking a path (6): 268.63 s
+
+Number of procedures inlined: 31
+Time elapsed so far: 617.994709
+No more counterexamples found, Corral returns verified...
+Final tracked vars: {assertsPassed, $Alloc}
+[TAG: AV_STATS] *************** STATS ***************
+[TAG: AV_STATS] check.and.refine(s) : 303.001192
+[TAG: AV_STATS] run.corral(s) : 299.100336
+[TAG: AV_STATS] explain.error(s) : 43.109632
+[TAG: AV_STATS] run.corral.iterative(s) : 617.995443
+[TAG: AV_STATS] Cpu(s) : 619.23285
+[TAG: AV_STATS] corral.count : 4
+[TAG: AV_STATS] count.check.refine : 10
+[TAG: AV_STATS] blocked.count : 3
+[TAG: AV_STATS] *************************************
+[TAG: AV_STATS] TotalTime(ms) : 619283

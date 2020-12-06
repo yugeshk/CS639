@@ -1,0 +1,1166 @@
+Warning: Using default recursion bound of 1
+[TAG: AV_OUTPUT] ----- Analyzing test_websocket_send.av.bpl ------
+[TAG: AV_STATS] #Procs : 18
+[TAG: AV_STATS] #Asserts : 72
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 0 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.94 seconds
+
+Boogie verification time: 0.15 s
+Time spent reading-writing programs: 1.01 s
+
+Time spent checking a program (1): 0.63 s
+Time spent checking a path (1): 0.29 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 1.003214
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/3
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p)];
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketMessage_trace_1_trace_1$0$$p5;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p5 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p4);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p4 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(4, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__38, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))] => $Alloc, alloc_$p1_WebSocketMessage__38
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__38, $mul.ref(0, 16)), $mul.ref(4, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))))])
+Printing trace Trace0
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 1 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 3.36 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+
+Boogie verification time: 0.37 s
+Time spent reading-writing programs: 4.69 s
+
+Time spent checking a program (7): 2.75 s
+Time spent checking a path (6): 1.82 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 6.59792
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/3
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p), inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p);
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketMessage_trace_1_trace_1$0$$p5;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p5 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p4);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p4 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(4, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__162, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))) => alloc_$p1_WebSocketMessage__162
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__162, $mul.ref(0, 16)), $mul.ref(4, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))))
+Printing trace Trace1
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 2 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.68 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 3.35 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.70 seconds
+
+Boogie verification time: 0.59 s
+Time spent reading-writing programs: 8.32 s
+
+Time spent checking a program (13): 4.96 s
+Time spent checking a path (11): 3.22 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 12.08825
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/3
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p, inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$size), $add.ref($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p), $Size($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p))));
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$size := inline$WebSocketMessage_trace_1_trace_1$0$$p6;
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketMessage_trace_1_trace_1$0$$p5;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p6 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$WebSocketMessage_trace_1_trace_1$0$$p5 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p4);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p4 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(4, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__286, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))))))) => alloc_$p1_WebSocketMessage__286
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__286, $mul.ref(0, 16)), $mul.ref(4, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(4, 1))))))))
+Printing trace Trace2
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 3 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.32 seconds
+Inconsistency check took: 3.39 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+
+Boogie verification time: 0.81 s
+Time spent reading-writing programs: 12.02 s
+
+Time spent checking a program (19): 7.16 s
+Time spent checking a path (16): 4.68 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 17.614074
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/7
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p)];
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p := inline$WebSocketMessage_trace_1_trace_1$0$$p13;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p13 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p12);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p12 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(12, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__410, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))] => $Alloc, alloc_$p1_WebSocketMessage__410
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__410, $mul.ref(0, 16)), $mul.ref(12, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))))])
+Printing trace Trace3
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 4 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 3.41 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.72 seconds
+
+Boogie verification time: 1.05 s
+Time spent reading-writing programs: 15.71 s
+
+Time spent checking a program (25): 9.44 s
+Time spent checking a path (21): 6.09 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 23.185162
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/5
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p)];
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$WebSocketMessage_trace_1_trace_1$0$$p9;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p8);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(8, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__534, complex-obj0)
+	complex-obj2 ==> $mul.ref(8, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))] => $Alloc, alloc_$p1_WebSocketMessage__534
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__534, $mul.ref(0, 16)), $mul.ref(8, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))))])
+Printing trace Trace4
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 5 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.70 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 3.41 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.72 seconds
+
+Boogie verification time: 1.29 s
+Time spent reading-writing programs: 19.44 s
+
+Time spent checking a program (31): 11.61 s
+Time spent checking a path (26): 7.61 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 28.821365
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/5
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p), inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p);
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$WebSocketMessage_trace_1_trace_1$0$$p9;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p8);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(8, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__658, complex-obj0)
+	complex-obj2 ==> $mul.ref(8, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))) => alloc_$p1_WebSocketMessage__658
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__658, $mul.ref(0, 16)), $mul.ref(8, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))))
+Printing trace Trace5
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 6 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.34 seconds
+Inconsistency check took: 3.47 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.75 seconds
+
+Boogie verification time: 1.50 s
+Time spent reading-writing programs: 23.17 s
+
+Time spent checking a program (37): 13.89 s
+Time spent checking a path (31): 9.13 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 34.508365
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/7
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p), inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p);
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p := inline$WebSocketMessage_trace_1_trace_1$0$$p13;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p13 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p12);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p12 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(12, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__782, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))) => alloc_$p1_WebSocketMessage__782
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__782, $mul.ref(0, 16)), $mul.ref(12, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))))
+Printing trace Trace6
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 7 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.70 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 3.47 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.75 seconds
+
+Boogie verification time: 1.75 s
+Time spent reading-writing programs: 26.88 s
+
+Time spent checking a program (43): 16.16 s
+Time spent checking a path (36): 10.64 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 40.238474
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/5
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p, inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$size), $add.ref($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p), $Size($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p))));
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$size := inline$WebSocketMessage_trace_1_trace_1$0$$p10;
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$WebSocketMessage_trace_1_trace_1$0$$p9;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p10 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$WebSocketMessage_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p8);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(8, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__906, complex-obj0)
+	complex-obj2 ==> $mul.ref(8, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))))))) => alloc_$p1_WebSocketMessage__906
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__906, $mul.ref(0, 16)), $mul.ref(8, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(8, 1))))))))
+Printing trace Trace7
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 8 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 3.52 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.75 seconds
+
+Boogie verification time: 2.01 s
+Time spent reading-writing programs: 30.66 s
+
+Time spent checking a program (49): 18.47 s
+Time spent checking a path (41): 12.16 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 46.011836
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/7
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 34, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p, inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$size), $add.ref($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p), $Size($base(inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p))));
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$size := inline$WebSocketMessage_trace_1_trace_1$0$$p14;
+	inline$WebSocketMessage_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p := inline$WebSocketMessage_trace_1_trace_1$0$$p13;
+	inline$WebSocketMessage_trace_1_trace_1$0$$p14 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$WebSocketMessage_trace_1_trace_1$0$$p13 := $bitcast.ref.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p12);
+	inline$WebSocketMessage_trace_1_trace_1$0$$p12 := $add.ref($add.ref(inline$WebSocketMessage_trace_1_trace_1$0$$p1, $mul.ref(0, 16)), $mul.ref(12, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 16)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketMessage__1030, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))))))) => alloc_$p1_WebSocketMessage__1030
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketMessage__1030, $mul.ref(0, 16)), $mul.ref(12, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 16)), $mul.ref(12, 1))))))))
+Printing trace Trace8
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 9 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.72 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 3.52 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+
+Boogie verification time: 2.27 s
+Time spent reading-writing programs: 34.48 s
+
+Time spent checking a program (55): 20.73 s
+Time spent checking a path (46): 13.69 s
+
+Number of procedures inlined: 3
+Time elapsed so far: 51.791635
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/2
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 20, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p, inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$size), $add.ref($base(inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p), $Size($base(inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p))));
+	inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$size := inline$WebSocketClose_trace_1_trace_1$0$$p5;
+	inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketClose_trace_1_trace_1$0$$p4;
+	inline$WebSocketClose_trace_1_trace_1$0$$p5 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$WebSocketClose_trace_1_trace_1$0$$p4 := $bitcast.ref.ref(inline$WebSocketClose_trace_1_trace_1$0$$p3);
+	inline$WebSocketClose_trace_1_trace_1$0$$p3 := $add.ref($add.ref(inline$WebSocketClose_trace_1_trace_1$0$$p1, $mul.ref(0, 524)), $mul.ref(4, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 524)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketClose__1154, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))))))) => alloc_$p1_WebSocketClose__1154
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1154, $mul.ref(0, 524)), $mul.ref(4, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_6(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1))))))))
+Printing trace Trace9
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 10 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.68 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.31 seconds
+Inconsistency check took: 3.54 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.79 seconds
+
+Boogie verification time: 2.56 s
+Time spent reading-writing programs: 38.21 s
+
+Time spent checking a program (61): 23.10 s
+Time spent checking a path (51): 15.20 s
+
+Number of procedures inlined: 5
+Time elapsed so far: 57.555033
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/2
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 20, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p)];
+	inline$WebSocketClose_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketClose_trace_1_trace_1$0$$p4;
+	inline$WebSocketClose_trace_1_trace_1$0$$p4 := $bitcast.ref.ref(inline$WebSocketClose_trace_1_trace_1$0$$p3);
+	inline$WebSocketClose_trace_1_trace_1$0$$p3 := $add.ref($add.ref(inline$WebSocketClose_trace_1_trace_1$0$$p1, $mul.ref(0, 524)), $mul.ref(4, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 524)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketClose__1211, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))] => $Alloc, alloc_$p1_WebSocketClose__1211
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketClose__1211, $mul.ref(0, 524)), $mul.ref(4, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_6(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 524)), $mul.ref(4, 1))))])
+Printing trace Trace10
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 11 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.68 seconds
+CorralMain L_BAF_3 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_2 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.72 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_1 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.32 seconds
+Inconsistency check took: 3.54 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.79 seconds
+
+Boogie verification time: 2.86 s
+Time spent reading-writing programs: 41.99 s
+
+Time spent checking a program (67): 25.44 s
+Time spent checking a path (56): 16.74 s
+
+Number of procedures inlined: 7
+Time elapsed so far: 63.348919
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/4
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_websocket_send.c, sourceLine = 10, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$WebSocketOpen_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p)];
+	inline$WebSocketOpen_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$WebSocketOpen_trace_1_trace_1$0$$p7;
+	inline$WebSocketOpen_trace_1_trace_1$0$$p7 := $bitcast.ref.ref(inline$WebSocketOpen_trace_1_trace_1$0$$p6);
+	inline$WebSocketOpen_trace_1_trace_1$0$$p6 := $add.ref($add.ref(inline$WebSocketOpen_trace_1_trace_1$0$$p1, $mul.ref(0, 4)), $mul.ref(0, 1));
+
+	#### sourceFile = test_websocket_send.c, sourceLine = 8, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+*..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1)))) != alloc_$CurrAddr__1267	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 4)
+	complex-obj1 ==> $add.ref(alloc_$p1_WebSocketOpen__1268, complex-obj0)
+	complex-obj2 ==> $mul.ref(0, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))] => $Alloc, alloc_$p1_WebSocketOpen__1268
+[TAG: AV_DEBUG] Generalizing field block expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_WebSocketOpen__1268, $mul.ref(0, 4)), $mul.ref(0, 1))))] to (forall _z: ref :: $Alloc[_z] > 0)
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall _z: ref :: $Alloc[_z] > 0)
+Printing trace Trace11
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 12 soft constraints and 4 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+PersistentProgram(8458,99): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.59 seconds
+1264 fails
+Corral call terminates inconclusively with Type errors...
+Inconsistency check took: 0.79 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 4 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+PersistentProgram(8409,71): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.07 seconds
+414 fails
+Corral call terminates inconclusively with Sharing violation on path /home/user/wasm/benchmarks/CS639/experiments/test_websocket_send/av/error.bpl...
+Final tracked vars: {assertsPassed, $Alloc}
+[TAG: AV_STATS] *************** STATS ***************
+[TAG: AV_STATS] check.and.refine(s) : 42.210358
+[TAG: AV_STATS] run.corral(s) : 9.101507
+[TAG: AV_STATS] explain.error(s) : 5.394078
+[TAG: AV_STATS] run.corral.iterative(s) : 65.692418
+[TAG: AV_STATS] Cpu(s) : 66.515564
+[TAG: AV_STATS] corral.count : 13
+[TAG: AV_STATS] count.check.refine : 69
+[TAG: AV_STATS] blocked.count : 12
+[TAG: AV_STATS] *************************************
+[TAG: AV_STATS] TotalTime(ms) : 66567

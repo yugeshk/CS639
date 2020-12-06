@@ -1,0 +1,203 @@
+Warning: Using default recursion bound of 1
+[TAG: AV_OUTPUT] ----- Analyzing custom_em_js_test.av.bpl ------
+[TAG: AV_STATS] #Procs : 14
+[TAG: AV_STATS] #Asserts : 17
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 0 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.23 seconds
+
+Boogie verification time: 0.41 s
+Time spent reading-writing programs: 0.93 s
+
+Time spent checking a program (1): 0.69 s
+Time spent checking a path (1): 0.52 s
+
+Number of procedures inlined: 66
+Time elapsed so far: 1.286209
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/4
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 533, 
+		 assert assertsPassed;
+	assertsPassed := $eq.ref.bool($base(inline$$free_trace_1_trace_1$0$p), inline$$free_trace_1_trace_1$0$p);
+	inline$$free_trace_1_trace_1$0$p := inline$free__trace_1_trace_1$0$$p0;
+	inline$free__trace_1_trace_1$0$$p0 := inline$main_trace_1_trace_1$0$$p13;
+	inline$main_trace_1_trace_1$0$$p13 := $load.ref($M.1, inline$main_trace_1_trace_1$0$$p1);
+	$M.1 := $store.ref($M.1, inline$main_trace_1_trace_1$0$$p1, inline$main_trace_1_trace_1$0$$p4);
+	inline$main_trace_1_trace_1$0$$p4 := alloc___58;
+	inline$main_trace_1_trace_1$0$$p1 := inline$$alloc_trace_2_trace_1$0$p;
+	inline$$alloc_trace_2_trace_1$0$p := inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p;
+	inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$CurrAddr := inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_0;
+	inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_0 := inline$havocNonDetAvh.ref_trace_2_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_2_trace_1$0$o := alloc_o__47;
+
+..Atom:!$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))	
+ Filtered atoms before true/false = !$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))
+..
+ Filtered atoms = !$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))
+.
+ Found a conjunctive cube cover !$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj3 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $store.ref($M.1, alloc_o__47, alloc___58)
+	complex-obj1 ==> $load.ref(complex-obj0, alloc_o__47)
+	complex-obj2 ==> $base(complex-obj1)
+	complex-obj3 ==> $eq.ref.bool(complex-obj2, complex-obj1)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj3	)
+[TAG: AV_DEBUG] List of used vars in $eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)) => $M.1, alloc_o__47, alloc___58
+[TAG: AV_DEBUG] The substituted expression for $eq.ref.bool($base($load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)), $load.ref($store.ref($M.1, alloc_o__47, alloc___58), alloc_o__47)) is $eq.ref.bool($base($load.ref($store.ref($M.1, x_7, x_11), x_7)), $load.ref($store.ref($M.1, x_7, x_11), x_7))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_7: ref, x_11: ref :: unknownTrigger_7(x_7) && unknownTrigger_0(x_11) ==> $eq.ref.bool($base($load.ref($store.ref($M.1, x_7, x_11), x_7)), $load.ref($store.ref($M.1, x_7, x_11), x_7)))
+Printing trace Trace0
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 1 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.59 seconds
+CorralMain CorralMainStart 25
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.23 seconds
+Inconsistency check took: 1.04 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $Alloc, $M.1}
+Program has a potential bug: True bug
+Corral took: 2.85 seconds
+
+Boogie verification time: 1.46 s
+Time spent reading-writing programs: 3.80 s
+
+Time spent checking a program (5): 2.14 s
+Time spent checking a path (6): 2.69 s
+
+Number of procedures inlined: 66
+Time elapsed so far: 7.022625
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/4
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 533, 
+		 assert assertsPassed;
+	assertsPassed := $slt.ref.bool($0.ref, inline$$free_trace_1_trace_1$0$p);
+	inline$$free_trace_1_trace_1$0$p := inline$free__trace_1_trace_1$0$$p0;
+	inline$free__trace_1_trace_1$0$$p0 := inline$main_trace_1_trace_1$0$$p13;
+	inline$main_trace_1_trace_1$0$$p13 := $load.ref($M.1, inline$main_trace_1_trace_1$0$$p1);
+	$M.1 := $store.ref($M.1, inline$main_trace_1_trace_1$0$$p1, inline$main_trace_1_trace_1$0$$p4);
+	inline$main_trace_1_trace_1$0$$p4 := alloc___118;
+	inline$main_trace_1_trace_1$0$$p1 := inline$$alloc_trace_2_trace_1$0$p;
+	inline$$alloc_trace_2_trace_1$0$p := inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p;
+	inline$$alloc_trace_2_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+	$CurrAddr := inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_0;
+	inline$$alloc_trace_1_trace_1$0$cmdloc_dummy_var_0 := inline$havocNonDetAvh.ref_trace_2_trace_1$0$o;
+	inline$havocNonDetAvh.ref_trace_2_trace_1$0$o := alloc_o__107;
+
+..Atom:!$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))	
+ Filtered atoms before true/false = !$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))
+..
+ Filtered atoms = !$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))
+.
+ Found a conjunctive cube cover !$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107)), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj2 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $store.ref($M.1, alloc_o__107, alloc___118)
+	complex-obj1 ==> $load.ref(complex-obj0, alloc_o__107)
+	complex-obj2 ==> $slt.ref.bool($0.ref, complex-obj1)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj2	)
+[TAG: AV_DEBUG] List of used vars in $slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107)) => $0.ref, $M.1, alloc_o__107, alloc___118
+[TAG: AV_DEBUG] The substituted expression for $slt.ref.bool($0.ref, $load.ref($store.ref($M.1, alloc_o__107, alloc___118), alloc_o__107)) is $slt.ref.bool($0.ref, $load.ref($store.ref($M.1, x_7, x_11), x_7))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_7: ref, x_11: ref :: unknownTrigger_7(x_7) && unknownTrigger_0(x_11) ==> $slt.ref.bool($0.ref, $load.ref($store.ref($M.1, x_7, x_11), x_7)))
+Printing trace Trace1
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 2 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 1.02 seconds
+CorralMain CorralMainStart 27
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.22 seconds
+Inconsistency check took: 1.44 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc, $M.1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.51 seconds
+
+Boogie verification time: 1.70 s
+Time spent reading-writing programs: 5.56 s
+
+Time spent checking a program (8): 3.21 s
+Time spent checking a path (7): 3.38 s
+
+Number of procedures inlined: 15
+Time elapsed so far: 10.726257
+No more counterexamples found, Corral returns verified...
+Final tracked vars: {assertsPassed, $Alloc, $M.1}
+[TAG: AV_STATS] *************** STATS ***************
+[TAG: AV_STATS] check.and.refine(s) : 6.660346
+[TAG: AV_STATS] run.corral(s) : 4.597185
+[TAG: AV_STATS] explain.error(s) : 1.076343
+[TAG: AV_STATS] run.corral.iterative(s) : 10.727228
+[TAG: AV_STATS] Cpu(s) : 11.421993
+[TAG: AV_STATS] corral.count : 3
+[TAG: AV_STATS] count.check.refine : 7
+[TAG: AV_STATS] blocked.count : 2
+[TAG: AV_STATS] *************************************
+[TAG: AV_STATS] TotalTime(ms) : 11474

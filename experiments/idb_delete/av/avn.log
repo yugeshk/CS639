@@ -1,0 +1,1150 @@
+Warning: Using default recursion bound of 1
+[TAG: AV_OUTPUT] ----- Analyzing idb_delete.av.bpl ------
+[TAG: AV_STATS] #Procs : 14
+[TAG: AV_STATS] #Asserts : 47
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 0 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.42 seconds
+
+Boogie verification time: 0.53 s
+Time spent reading-writing programs: 1.03 s
+
+Time spent checking a program (1): 0.82 s
+Time spent checking a path (1): 0.59 s
+
+Number of procedures inlined: 77
+Time elapsed so far: 1.472802
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/12
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 20, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p, inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$size), $add.ref($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p), $Size($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p))));
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$size := inline$main_trace_1_trace_1$0$$p10;
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$main_trace_1_trace_1$0$$p9;
+	inline$main_trace_1_trace_1$0$$p10 := $bitcast.ref.ref($i2p.i64.ref(2));
+	inline$main_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p8);
+	inline$main_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p7, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 19, 
+		 inline$main_trace_1_trace_1$0$$p7 := alloc___139;
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___139, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(2)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))))))) => alloc___139
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___139, $mul.ref(0, 208)), $mul.ref(42, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_9: ref :: unknownTrigger_0(x_9) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))))))))
+Printing trace Trace0
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 1 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.62 seconds
+CorralMain CorralMainStart 21
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.13 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.19 seconds
+
+Boogie verification time: 1.17 s
+Time spent reading-writing programs: 3.31 s
+
+Time spent checking a program (4): 2.00 s
+Time spent checking a path (3): 1.48 s
+
+Number of procedures inlined: 77
+Time elapsed so far: 5.934951
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/12
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 20, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p)];
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$main_trace_1_trace_1$0$$p9;
+	inline$main_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p8);
+	inline$main_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p7, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 19, 
+		 inline$main_trace_1_trace_1$0$$p7 := alloc___279;
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 16, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+*******************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+...................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___279, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))] => $Alloc, alloc___279
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___279, $mul.ref(0, 208)), $mul.ref(42, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_9: ref :: unknownTrigger_0(x_9) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))))])
+Printing trace Trace1
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 2 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain CorralMainStart 23
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.14 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.22 seconds
+
+Boogie verification time: 1.85 s
+Time spent reading-writing programs: 5.59 s
+
+Time spent checking a program (7): 3.24 s
+Time spent checking a path (5): 2.38 s
+
+Number of procedures inlined: 77
+Time elapsed so far: 20.190447
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/12
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 20, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p), inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p);
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$main_trace_1_trace_1$0$$p9;
+	inline$main_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p8);
+	inline$main_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p7, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 19, 
+		 inline$main_trace_1_trace_1$0$$p7 := alloc___419;
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___419, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))) => alloc___419
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___419, $mul.ref(0, 208)), $mul.ref(42, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_9: ref :: unknownTrigger_0(x_9) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_9, $mul.ref(0, 208)), $mul.ref(42, 1)))))
+Printing trace Trace2
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 3 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.62 seconds
+CorralMain CorralMainStart 25
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.11 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.90 seconds
+
+Boogie verification time: 3.17 s
+Time spent reading-writing programs: 7.88 s
+
+Time spent checking a program (10): 4.68 s
+Time spent checking a path (7): 3.72 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 25.242943
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/36
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 30, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p, inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$size), $add.ref($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p), $Size($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p))));
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$size := inline$main_trace_1_trace_1$0$$p35;
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p := inline$main_trace_1_trace_1$0$$p34;
+	inline$main_trace_1_trace_1$0$$p35 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$main_trace_1_trace_1$0$$p34 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p33);
+	inline$main_trace_1_trace_1$0$$p33 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(12, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___565;
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___565, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))))))) => alloc___565
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___565, $mul.ref(0, 208)), $mul.ref(12, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))))))))
+Printing trace Trace3
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 4 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain CorralMainStart 27
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.26 seconds
+Inconsistency check took: 1.15 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.80 seconds
+
+Boogie verification time: 4.99 s
+Time spent reading-writing programs: 10.22 s
+
+Time spent checking a program (13): 6.03 s
+Time spent checking a path (9): 5.10 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 30.976968
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/25
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 28, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p)];
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p := inline$main_trace_1_trace_1$0$$p23;
+	inline$main_trace_1_trace_1$0$$p23 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p22);
+	inline$main_trace_1_trace_1$0$$p22 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___711;
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 16, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+*******************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+...................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___711, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))] => $Alloc, alloc___711
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___711, $mul.ref(0, 208)), $mul.ref(42, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))))])
+Printing trace Trace4
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 5 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain CorralMainStart 29
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.16 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.89 seconds
+
+Boogie verification time: 6.74 s
+Time spent reading-writing programs: 12.60 s
+
+Time spent checking a program (16): 7.48 s
+Time spent checking a path (11): 6.47 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 47.52473
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/25
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 28, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p), inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p);
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p := inline$main_trace_1_trace_1$0$$p23;
+	inline$main_trace_1_trace_1$0$$p23 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p22);
+	inline$main_trace_1_trace_1$0$$p22 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___857;
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___857, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))) => alloc___857
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___857, $mul.ref(0, 208)), $mul.ref(42, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))))
+Printing trace Trace5
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 6 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.62 seconds
+CorralMain CorralMainStart 31
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.13 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.76 seconds
+
+Boogie verification time: 8.44 s
+Time spent reading-writing programs: 14.96 s
+
+Time spent checking a program (19): 8.84 s
+Time spent checking a path (13): 7.76 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 53.066348
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/31
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 29, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p), inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p);
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p := inline$main_trace_1_trace_1$0$$p29;
+	inline$main_trace_1_trace_1$0$$p29 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p28);
+	inline$main_trace_1_trace_1$0$$p28 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(16, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1003;
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1003, complex-obj0)
+	complex-obj2 ==> $mul.ref(16, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))) => alloc___1003
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1003, $mul.ref(0, 208)), $mul.ref(16, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))))
+Printing trace Trace6
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 7 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.63 seconds
+CorralMain CorralMainStart 33
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 1.15 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.79 seconds
+
+Boogie verification time: 10.65 s
+Time spent reading-writing programs: 17.33 s
+
+Time spent checking a program (22): 10.09 s
+Time spent checking a path (15): 9.22 s
+
+Number of procedures inlined: 81
+Time elapsed so far: 59.155104
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/25
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 28, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p, inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$size), $add.ref($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p), $Size($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p))));
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$size := inline$main_trace_1_trace_1$0$$p24;
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p := inline$main_trace_1_trace_1$0$$p23;
+	inline$main_trace_1_trace_1$0$$p24 := $bitcast.ref.ref($i2p.i64.ref(2));
+	inline$main_trace_1_trace_1$0$$p23 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p22);
+	inline$main_trace_1_trace_1$0$$p22 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1149;
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1149, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(2)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))))))) => alloc___1149
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1149, $mul.ref(0, 208)), $mul.ref(42, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))), $bitcast.ref.ref($i2p.i64.ref(2))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(42, 1))))))))
+Printing trace Trace7
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 8 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain CorralMainStart 35
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.31 seconds
+Inconsistency check took: 1.18 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 2.00 seconds
+
+Boogie verification time: 12.51 s
+Time spent reading-writing programs: 19.71 s
+
+Time spent checking a program (25): 11.56 s
+Time spent checking a path (17): 10.70 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 64.991469
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/36
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 30, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p)];
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p := inline$main_trace_1_trace_1$0$$p34;
+	inline$main_trace_1_trace_1$0$$p34 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p33);
+	inline$main_trace_1_trace_1$0$$p33 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(12, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1295;
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 16, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+*******************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != $1024.ref	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_static_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != llvm.dbg.value	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __gxx_personality_v0	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_init_func_memory_model	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_memory_leak	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_memory_safety	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_top_decl	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_decls	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_overflow	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_dummy	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_code	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __VERIFIER_assume	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != printf	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch_close	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __assert_fail	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != _ZTISt9bad_alloc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != errno_global	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.1.28	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.27	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.2.26	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != env_value_str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.25	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.24	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.12	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.11	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.10	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.9	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.8	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.7	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.6	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.5	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __func__.main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.3	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.4	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.1	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.2	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != _Z6strcpyPcPKc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch_attr_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != llvm.dbg.declare	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+...................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != $1024.ref	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_static_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != llvm.dbg.value	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __gxx_personality_v0	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_init_func_memory_model	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_memory_leak	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_memory_safety	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_top_decl	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_decls	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_check_overflow	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_dummy	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_code	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __VERIFIER_assume	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != printf	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch_close	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __assert_fail	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != _ZTISt9bad_alloc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != errno_global	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.1.28	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.27	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.2.26	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != env_value_str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.25	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.24	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_signed_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __SMACK_nondet_unsigned_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.12	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.11	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.10	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.9	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.8	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.7	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.6	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.5	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != __func__.main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.3	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.4	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.1	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != .str.2	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != _Z6strcpyPcPKc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != emscripten_fetch_attr_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1)))) != llvm.dbg.declare	..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1295, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))] => $Alloc, alloc___1295
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1295, $mul.ref(0, 208)), $mul.ref(12, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))))])
+Printing trace Trace8
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 9 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain CorralMainStart 37
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.31 seconds
+Inconsistency check took: 1.18 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.93 seconds
+
+Boogie verification time: 14.42 s
+Time spent reading-writing programs: 22.07 s
+
+Time spent checking a program (28): 13.03 s
+Time spent checking a path (19): 12.11 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 82.05889
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/31
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 29, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p)];
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p := inline$main_trace_1_trace_1$0$$p29;
+	inline$main_trace_1_trace_1$0$$p29 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p28);
+	inline$main_trace_1_trace_1$0$$p28 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(16, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1441;
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 16, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+*******************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != $1024.ref	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_static_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != llvm.dbg.value	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __gxx_personality_v0	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_init_func_memory_model	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_memory_leak	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_memory_safety	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_top_decl	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_decls	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_overflow	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_dummy	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_code	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __VERIFIER_assume	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != printf	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch_close	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __assert_fail	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != _ZTISt9bad_alloc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != errno_global	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.1.28	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.27	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.2.26	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != env_value_str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.25	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.24	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.12	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.11	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.10	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.9	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.8	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.7	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.6	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.5	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __func__.main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.3	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.4	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.1	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.2	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != _Z6strcpyPcPKc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch_attr_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != llvm.dbg.declare	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+...................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != $1024.ref	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_static_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != llvm.dbg.value	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __gxx_personality_v0	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_init_func_memory_model	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_memory_leak	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_memory_safety	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_top_decl	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_decls	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_check_overflow	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_dummy	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_code	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __VERIFIER_assume	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != printf	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch_close	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __assert_fail	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != _ZTISt9bad_alloc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != errno_global	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.1.28	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.27	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.2.26	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != env_value_str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.25	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.24	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_signed_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __SMACK_nondet_unsigned_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.12	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.11	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.10	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.9	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.8	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.7	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.6	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.5	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != __func__.main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.3	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.4	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.1	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != .str.2	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != _Z6strcpyPcPKc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != emscripten_fetch_attr_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1)))) != llvm.dbg.declare	..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1441, complex-obj0)
+	complex-obj2 ==> $mul.ref(16, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))] => $Alloc, alloc___1441
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1441, $mul.ref(0, 208)), $mul.ref(16, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))))])
+Printing trace Trace9
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 10 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain CorralMainStart 39
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 1.18 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 2.12 seconds
+
+Boogie verification time: 16.42 s
+Time spent reading-writing programs: 24.58 s
+
+Time spent checking a program (31): 14.54 s
+Time spent checking a path (21): 13.68 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 99.347779
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/36
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 30, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p), inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p);
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$5$p := inline$main_trace_1_trace_1$0$$p34;
+	inline$main_trace_1_trace_1$0$$p34 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p33);
+	inline$main_trace_1_trace_1$0$$p33 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(12, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1587;
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1587, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))) => alloc___1587
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc___1587, $mul.ref(0, 208)), $mul.ref(12, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(12, 1)))))
+Printing trace Trace10
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 11 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.74 seconds
+CorralMain CorralMainStart 41
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.31 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 1.87 seconds
+
+Boogie verification time: 18.23 s
+Time spent reading-writing programs: 27.19 s
+
+Time spent checking a program (34): 16.01 s
+Time spent checking a path (23): 15.09 s
+
+Number of procedures inlined: 79
+Time elapsed so far: 105.500209
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 2/31
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 29, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p, inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$size), $add.ref($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p), $Size($base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p))));
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$size := inline$main_trace_1_trace_1$0$$p30;
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$4$p := inline$main_trace_1_trace_1$0$$p29;
+	inline$main_trace_1_trace_1$0$$p30 := $bitcast.ref.ref($i2p.i64.ref(8));
+	inline$main_trace_1_trace_1$0$$p29 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p28);
+	inline$main_trace_1_trace_1$0$$p28 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p21, $mul.ref(0, 208)), $mul.ref(16, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 27, 
+		 inline$main_trace_1_trace_1$0$$p21 := alloc___1733;
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1733, complex-obj0)
+	complex-obj2 ==> $mul.ref(16, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(8)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))))))) => alloc___1733
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc___1733, $mul.ref(0, 208)), $mul.ref(16, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_12: ref :: unknownTrigger_1(x_12) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))), $bitcast.ref.ref($i2p.i64.ref(8))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_12, $mul.ref(0, 208)), $mul.ref(16, 1))))))))
+Printing trace Trace11
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 12 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain CorralMainStart 43
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.17 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 2.98 seconds
+
+Boogie verification time: 21.13 s
+Time spent reading-writing programs: 29.63 s
+
+Time spent checking a program (37): 17.54 s
+Time spent checking a path (25): 17.47 s
+
+Number of procedures inlined: 81
+Time elapsed so far: 112.554949
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 4/48
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = idb_delete.cpp, sourceLine = 38, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p)];
+	inline$main_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p := inline$main_trace_1_trace_1$0$$p47;
+	inline$main_trace_1_trace_1$0$$p47 := $bitcast.ref.ref(inline$main_trace_1_trace_1$0$$p46);
+	inline$main_trace_1_trace_1$0$$p46 := $add.ref($add.ref(inline$main_trace_1_trace_1$0$$p45, $mul.ref(0, 208)), $mul.ref(42, 1));
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 37, 
+		 inline$main_trace_1_trace_1$0$$p45 := alloc___1885;
+
+	#### sourceFile = idb_delete.cpp, sourceLine = 16, 
+		 $Alloc[inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p] := true;
+	inline$$alloc_trace_1_trace_1$0$inline$$$alloc$0$p := $CurrAddr;
+
+	#### sourceFile = /usr/local/share/smack/lib/smack.c, sourceLine = 528, 
+		 $CurrAddr := $1024.ref;
+
+*******************************************************************..!!! WARNING: The ITE simplications are not validity preserving
+Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+.
+ No conjunctive cube cover found...going for precise but expensive DNF based cover
+
+...................................................................
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != $1024.ref	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_static_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.value	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __gxx_personality_v0	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_init_func_memory_model	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_leak	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_memory_safety	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_top_decl	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_decls	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_char	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_check_overflow	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_dummy	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_code	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __VERIFIER_assume	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != printf	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_close	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __assert_fail	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_long_long	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _ZTISt9bad_alloc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != errno_global	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1.28	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.27	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2.26	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != env_value_str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.25	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.24	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_signed_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_short	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __SMACK_nondet_unsigned_int	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.12	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.11	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.10	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.9	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.8	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.7	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.6	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.5	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != __func__.main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.3	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.4	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.1	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != .str.2	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != _Z6strcpyPcPKc	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != emscripten_fetch_attr_init	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != main	..Atom:$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1)))) != llvm.dbg.declare	..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))], IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 208)
+	complex-obj1 ==> $add.ref(alloc___1885, complex-obj0)
+	complex-obj2 ==> $mul.ref(42, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))] => $Alloc, alloc___1885
+[TAG: AV_DEBUG] Generalizing field block expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc___1885, $mul.ref(0, 208)), $mul.ref(42, 1))))] to (forall _z: ref :: $Alloc[_z] > 0)
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall _z: ref :: $Alloc[_z] > 0)
+Printing trace Trace12
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 13 soft constraints and 1 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+PersistentProgram(7747,99): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.12 seconds
+1264 fails
+Corral call terminates inconclusively with Type errors...
+Inconsistency check took: 0.30 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 1 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+PersistentProgram(7717,71): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.15 seconds
+414 fails
+Corral call terminates inconclusively with Type errors...
+Final tracked vars: {assertsPassed, $Alloc}
+[TAG: AV_STATS] *************** STATS ***************
+[TAG: AV_STATS] check.and.refine(s) : 35.042022
+[TAG: AV_STATS] run.corral(s) : 23.866264
+[TAG: AV_STATS] explain.error(s) : 64.472076
+[TAG: AV_STATS] run.corral.iterative(s) : 128.980159
+[TAG: AV_STATS] Cpu(s) : 129.744962
+[TAG: AV_STATS] corral.count : 14
+[TAG: AV_STATS] count.check.refine : 39
+[TAG: AV_STATS] blocked.count : 13
+[TAG: AV_STATS] *************************************
+[TAG: AV_STATS] TotalTime(ms) : 129797

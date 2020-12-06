@@ -1,0 +1,1033 @@
+Warning: Using default recursion bound of 1
+[TAG: AV_OUTPUT] ----- Analyzing test_html5_pointerlockerror.av.bpl ------
+[TAG: AV_STATS] #Procs : 14
+[TAG: AV_STATS] #Asserts : 38
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 0 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.93 seconds
+
+Boogie verification time: 0.16 s
+Time spent reading-writing programs: 0.98 s
+
+Time spent checking a program (1): 0.62 s
+Time spent checking a path (1): 0.30 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 0.990861
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/6
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p)];
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$click_callback_trace_1_trace_1$0$$p9;
+	inline$click_callback_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p8);
+	inline$click_callback_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(4, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__22, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))] => $Alloc, alloc_$p1_click_callback__22
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__22, $mul.ref(0, 64)), $mul.ref(4, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1))))])
+Printing trace Trace0
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 1 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 1.89 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+
+Boogie verification time: 0.32 s
+Time spent reading-writing programs: 3.59 s
+
+Time spent checking a program (5): 2.01 s
+Time spent checking a path (4): 1.16 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 5.035172
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/6
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p), inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p);
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$1$p := inline$click_callback_trace_1_trace_1$0$$p9;
+	inline$click_callback_trace_1_trace_1$0$$p9 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p8);
+	inline$click_callback_trace_1_trace_1$0$$p8 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(4, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__121, complex-obj0)
+	complex-obj2 ==> $mul.ref(4, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))) => alloc_$p1_click_callback__121
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__121, $mul.ref(0, 64)), $mul.ref(4, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(4, 1)))))
+Printing trace Trace1
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 2 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.64 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.85 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.70 seconds
+
+Boogie verification time: 0.47 s
+Time spent reading-writing programs: 6.22 s
+
+Time spent checking a program (9): 3.39 s
+Time spent checking a path (7): 2.05 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 8.97851
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/2
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p)];
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$click_callback_trace_1_trace_1$0$$p4;
+	inline$click_callback_trace_1_trace_1$0$$p4 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p3);
+	inline$click_callback_trace_1_trace_1$0$$p3 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(0, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__220, complex-obj0)
+	complex-obj2 ==> $mul.ref(0, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))] => $Alloc, alloc_$p1_click_callback__220
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__220, $mul.ref(0, 64)), $mul.ref(0, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1))))])
+Printing trace Trace2
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 3 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.94 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.78 seconds
+
+Boogie verification time: 0.66 s
+Time spent reading-writing programs: 8.88 s
+
+Time spent checking a program (13): 4.86 s
+Time spent checking a path (10): 2.98 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 13.102002
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/35
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 46, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p, inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$size), $add.ref($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p), $Size($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p))));
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$size := inline$click_callback_trace_1_trace_1$0$$p45;
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p := inline$click_callback_trace_1_trace_1$0$$p44;
+	inline$click_callback_trace_1_trace_1$0$$p45 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$click_callback_trace_1_trace_1$0$$p44 := $bitcast.ref.ref(gotClick);
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj7 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $bitcast.ref.ref(gotClick)
+	complex-obj1 ==> $i2p.i64.ref(4)
+	complex-obj2 ==> $bitcast.ref.ref(complex-obj1)
+	complex-obj3 ==> $add.ref(complex-obj0, complex-obj2)
+	complex-obj4 ==> $base(complex-obj0)
+	complex-obj5 ==> $Size(complex-obj4)
+	complex-obj6 ==> $add.ref(complex-obj4, complex-obj5)
+	complex-obj7 ==> $sle.ref.bool(complex-obj3, complex-obj6)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj7	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick))))) => gotClick
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick))))) is $sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+[TAG: AV_WARNING] The expression has no free allocated variables true ==> $sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: true ==> $sle.ref.bool($add.ref($bitcast.ref.ref(gotClick), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref(gotClick)), $Size($base($bitcast.ref.ref(gotClick)))))
+Printing trace Trace3
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 4 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.66 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.89 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.77 seconds
+
+Boogie verification time: 0.86 s
+Time spent reading-writing programs: 11.53 s
+
+Time spent checking a program (17): 6.26 s
+Time spent checking a path (13): 3.94 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 17.295276
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/35
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 46, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p), inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p);
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p := inline$click_callback_trace_1_trace_1$0$$p44;
+	inline$click_callback_trace_1_trace_1$0$$p44 := $bitcast.ref.ref(gotClick);
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick)), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj2 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $bitcast.ref.ref(gotClick)
+	complex-obj1 ==> $base(complex-obj0)
+	complex-obj2 ==> $sle.ref.bool(complex-obj1, complex-obj0)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj2	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick)) => gotClick
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick)) is $sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+[TAG: AV_WARNING] The expression has no free allocated variables true ==> $sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: true ==> $sle.ref.bool($base($bitcast.ref.ref(gotClick)), $bitcast.ref.ref(gotClick))
+Printing trace Trace4
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 5 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.65 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 1.91 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.74 seconds
+
+Boogie verification time: 1.06 s
+Time spent reading-writing programs: 14.23 s
+
+Time spent checking a program (21): 7.67 s
+Time spent checking a path (16): 4.86 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 21.477485
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/35
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 46, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p)];
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$8$p := inline$click_callback_trace_1_trace_1$0$$p44;
+	inline$click_callback_trace_1_trace_1$0$$p44 := $bitcast.ref.ref(gotClick);
+
+..Atom:!$Alloc[$base($bitcast.ref.ref(gotClick))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref(gotClick))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref(gotClick))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref(gotClick))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref(gotClick))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref(gotClick))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref(gotClick))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj2 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $bitcast.ref.ref(gotClick)
+	complex-obj1 ==> $base(complex-obj0)
+	complex-obj2 ==> $Alloc[complex-obj1]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj2	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref(gotClick))] => $Alloc, gotClick
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref(gotClick))] is $Alloc[$base($bitcast.ref.ref(gotClick))]
+[TAG: AV_WARNING] The expression has no free allocated variables true ==> $Alloc[$base($bitcast.ref.ref(gotClick))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: true ==> $Alloc[$base($bitcast.ref.ref(gotClick))]
+Printing trace Trace5
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 6 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 1.01 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 1.09 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 2.67 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+
+Boogie verification time: 1.26 s
+Time spent reading-writing programs: 16.95 s
+
+Time spent checking a program (25): 9.69 s
+Time spent checking a path (19): 5.94 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 26.390703
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/30
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p, inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$size), $add.ref($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p), $Size($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p))));
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$size := inline$click_callback_trace_1_trace_1$0$$p40;
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p := inline$click_callback_trace_1_trace_1$0$$p39;
+	inline$click_callback_trace_1_trace_1$0$$p40 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$click_callback_trace_1_trace_1$0$$p39 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p38);
+	inline$click_callback_trace_1_trace_1$0$$p38 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(48, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__616, complex-obj0)
+	complex-obj2 ==> $mul.ref(48, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))))))) => alloc_$p1_click_callback__616
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__616, $mul.ref(0, 64)), $mul.ref(48, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1))))))))
+Printing trace Trace6
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 7 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 1.93 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+
+Boogie verification time: 1.45 s
+Time spent reading-writing programs: 19.64 s
+
+Time spent checking a program (29): 11.17 s
+Time spent checking a path (22): 6.81 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 30.594353
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/2
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p), inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p);
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$0$p := inline$click_callback_trace_1_trace_1$0$$p4;
+	inline$click_callback_trace_1_trace_1$0$$p4 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p3);
+	inline$click_callback_trace_1_trace_1$0$$p3 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(0, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__715, complex-obj0)
+	complex-obj2 ==> $mul.ref(0, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))) => alloc_$p1_click_callback__715
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__715, $mul.ref(0, 64)), $mul.ref(0, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(0, 1)))))
+Printing trace Trace7
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 8 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.69 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.28 seconds
+Inconsistency check took: 1.95 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.76 seconds
+
+Boogie verification time: 1.63 s
+Time spent reading-writing programs: 22.35 s
+
+Time spent checking a program (33): 12.61 s
+Time spent checking a path (25): 7.79 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 34.745699
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/30
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p), inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p);
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$7$p := inline$click_callback_trace_1_trace_1$0$$p39;
+	inline$click_callback_trace_1_trace_1$0$$p39 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p38);
+	inline$click_callback_trace_1_trace_1$0$$p38 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(48, 1));
+
+..Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))	
+ Filtered atoms before true/false = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))
+..
+ Filtered atoms = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__814, complex-obj0)
+	complex-obj2 ==> $mul.ref(48, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $sle.ref.bool(complex-obj5, complex-obj4)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))) => alloc_$p1_click_callback__814
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__814, $mul.ref(0, 64)), $mul.ref(48, 1)))) is $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))), $bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(48, 1)))))
+Printing trace Trace8
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 9 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.67 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.29 seconds
+Inconsistency check took: 1.97 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.77 seconds
+
+Boogie verification time: 1.85 s
+Time spent reading-writing programs: 25.08 s
+
+Time spent checking a program (37): 14.06 s
+Time spent checking a path (28): 8.74 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 39.071706
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/26
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $sle.ref.bool($add.ref(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$p, inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$size), $add.ref($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$p), $Size($base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$p))));
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$size := inline$click_callback_trace_1_trace_1$0$$p35;
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$6$p := inline$click_callback_trace_1_trace_1$0$$p34;
+	inline$click_callback_trace_1_trace_1$0$$p35 := $bitcast.ref.ref($i2p.i64.ref(4));
+	inline$click_callback_trace_1_trace_1$0$$p34 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p33);
+	inline$click_callback_trace_1_trace_1$0$$p33 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(44, 1));
+
+..Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))	
+ Filtered atoms before true/false = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))
+..
+ Filtered atoms = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))
+.
+ Found a conjunctive cube cover !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))))))), IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))))))
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj11 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__913, complex-obj0)
+	complex-obj2 ==> $mul.ref(44, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $i2p.i64.ref(4)
+	complex-obj6 ==> $bitcast.ref.ref(complex-obj5)
+	complex-obj7 ==> $add.ref(complex-obj4, complex-obj6)
+	complex-obj8 ==> $base(complex-obj4)
+	complex-obj9 ==> $Size(complex-obj8)
+	complex-obj10 ==> $add.ref(complex-obj8, complex-obj9)
+	complex-obj11 ==> $sle.ref.bool(complex-obj7, complex-obj10)
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj11	)
+[TAG: AV_DEBUG] List of used vars in $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))))))) => alloc_$p1_click_callback__913
+[TAG: AV_DEBUG] The substituted expression for $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__913, $mul.ref(0, 64)), $mul.ref(44, 1))))))) is $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1)))))))
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $sle.ref.bool($add.ref($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1))), $bitcast.ref.ref($i2p.i64.ref(4))), $add.ref($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1)))), $Size($base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(44, 1))))))))
+Printing trace Trace9
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 10 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.71 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.68 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.30 seconds
+Inconsistency check took: 2.00 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+
+Boogie verification time: 2.04 s
+Time spent reading-writing programs: 27.82 s
+
+Time spent checking a program (41): 15.54 s
+Time spent checking a path (31): 9.68 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 43.382192
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/14
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p)];
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$3$p := inline$click_callback_trace_1_trace_1$0$$p19;
+	inline$click_callback_trace_1_trace_1$0$$p19 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p18);
+	inline$click_callback_trace_1_trace_1$0$$p18 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(12, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__1012, complex-obj0)
+	complex-obj2 ==> $mul.ref(12, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))] => $Alloc, alloc_$p1_click_callback__1012
+[TAG: AV_DEBUG] The substituted expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1012, $mul.ref(0, 64)), $mul.ref(12, 1))))] is $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(12, 1))))]
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall x_5: ref :: unknownTrigger_4(x_5) ==> $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(x_5, $mul.ref(0, 64)), $mul.ref(12, 1))))])
+Printing trace Trace10
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 11 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.70 seconds
+CorralMain L_BAF_0 7
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has a potential bug: True bug
+Corral took: 0.68 seconds
+CorralMain L_BAF_1 1
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+Program has no bugs
+Procedures that hit the recursion bound: 
+Corral took: 0.27 seconds
+Inconsistency check took: 1.95 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+Program has a potential bug: True bug
+Corral took: 0.73 seconds
+
+Boogie verification time: 2.23 s
+Time spent reading-writing programs: 30.55 s
+
+Time spent checking a program (45): 16.96 s
+Time spent checking a path (34): 10.64 s
+
+Number of procedures inlined: 2
+Time elapsed so far: 47.572555
+List of non-cmd-line arguments to EE = 
+ExplainError:Timeout = 1000
+############# Implementation = CorralMain_SeqInstr_trace_1_trace_1 #################
+ExplainError[Precond]: Num of conditionals considered by slice/Total Num conditionals = 0/0
+ExplainError[Precond]: Num of relevant source lines considered by slice/Total source lines = 1/10
+ExplainError[Precond]: Sliced Trace => 
+	#### sourceFile = test_html5_pointerlockerror.c, sourceLine = 44, 
+		 assert assertsPassed;
+	assertsPassed := $Alloc[$base(inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p)];
+	inline$click_callback_trace_1_trace_1$0$inline$__SMACK_check_memory_safety$2$p := inline$click_callback_trace_1_trace_1$0$$p14;
+	inline$click_callback_trace_1_trace_1$0$$p14 := $bitcast.ref.ref(inline$click_callback_trace_1_trace_1$0$$p13);
+	inline$click_callback_trace_1_trace_1$0$$p13 := $add.ref($add.ref(inline$click_callback_trace_1_trace_1$0$$p1, $mul.ref(0, 64)), $mul.ref(8, 1));
+
+..Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]	
+ Filtered atoms before true/false = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]
+..
+ Filtered atoms = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]
+.
+ Found a conjunctive cube cover !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]
+
+
+
+-------------------- Pre at Start in DNF [Size = 1] ---------------------
+...Atom:!$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]	--------------------- Feasible Count = 1 ----------------------------
+Disjunct = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))], IsNecessary= True
+Disjunct = false, IsNecessary= False
+.ExplainError Rootcause = !$Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))]
+
+
+The list disjuncts
+---------------------
+
+	 !complex-obj6 
+------------
+
+
+The list of complex objs definitions 
+	complex-obj0 ==> $mul.ref(0, 64)
+	complex-obj1 ==> $add.ref(alloc_$p1_click_callback__1111, complex-obj0)
+	complex-obj2 ==> $mul.ref(8, 1)
+	complex-obj3 ==> $add.ref(complex-obj1, complex-obj2)
+	complex-obj4 ==> $bitcast.ref.ref(complex-obj3)
+	complex-obj5 ==> $base(complex-obj4)
+	complex-obj6 ==> $Alloc[complex-obj5]
+[TAG: AV_DEBUG] The output of ExplainError => Status = SUCCESS Exprs = (!complex-obj6	)
+[TAG: AV_DEBUG] List of used vars in $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))] => $Alloc, alloc_$p1_click_callback__1111
+[TAG: AV_DEBUG] Generalizing field block expression for $Alloc[$base($bitcast.ref.ref($add.ref($add.ref(alloc_$p1_click_callback__1111, $mul.ref(0, 64)), $mul.ref(8, 1))))] to (forall _z: ref :: $Alloc[_z] > 0)
+[TAG: AV_OUTPUT] EXPLAINERROR-BLOCK :: (forall _z: ref :: $Alloc[_z] > 0)
+Printing trace Trace11
+Stubs used along the trace: {}
+Checking inconsistency
+CheckInconsistency: 12 soft constraints and 2 assertions (0 pruned)
+Setting Corral timeout to 100 seconds
+Verifying program while tracking: {$Alloc, assertsPassed1}
+PersistentProgram(8080,99): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.13 seconds
+1264 fails
+Corral call terminates inconclusively with Type errors...
+Inconsistency check took: 0.31 seconds
+Relaxing environment constraints
+RelaxEnvironment: 0 env constraints and 2 assertions
+[TAG: AV_DEBUG] Recursion Bound: 1
+Setting Corral timeout to 0 seconds
+Verifying program while tracking: {assertsPassed, $Alloc}
+PersistentProgram(8042,71): Error: invalid argument types (bool and int) to binary operator >
+Corral took: 0.13 seconds
+414 fails
+Corral call terminates inconclusively with Type errors...
+Final tracked vars: {assertsPassed, $Alloc}
+[TAG: AV_STATS] *************** STATS ***************
+[TAG: AV_STATS] check.and.refine(s) : 27.626472
+[TAG: AV_STATS] run.corral(s) : 9.047118
+[TAG: AV_STATS] explain.error(s) : 5.471936
+[TAG: AV_STATS] run.corral.iterative(s) : 49.497334
+[TAG: AV_STATS] Cpu(s) : 50.310934
+[TAG: AV_STATS] corral.count : 13
+[TAG: AV_STATS] count.check.refine : 47
+[TAG: AV_STATS] blocked.count : 12
+[TAG: AV_STATS] *************************************
+[TAG: AV_STATS] TotalTime(ms) : 50365
