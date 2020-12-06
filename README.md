@@ -1,6 +1,6 @@
 # CS639
 
-This repository maintains our code for the course CS639A (Program Analysis and Verification) at IIT Kanpur in the Fall of 2020.  
+This repository maintains our code for the course CS639A (Program Analysis and Verification) at IIT Kanpur in the Fall of 2020. For a detailed discussion, please refer to this [file](https://github.com/yugeshk/CS639/blob/master/CS639-report_170203_170830.pdf).
 
 ## Setup
 
