@@ -1,0 +1,3 @@
+Stubs/Harness Added:Earlier code for return_str() was in JS, added a  C version for it.
+
+Bugs Identified: Without stubs a memory leak was being missed. Now it is not missed. 

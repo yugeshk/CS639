@@ -1,0 +1,269 @@
+s
+#
+1 416 3 1 c
+1 416 6 70 __SMACK_init_func_memory_model|/usr/local/share/smack/lib/smack.c|528|
+1 421 3 1 c
+1 421 6 70 __SMACK_init_func_memory_model|/usr/local/share/smack/lib/smack.c|531|
+1 424 3 1 c
+1 424 6 70 __SMACK_init_func_memory_model|/usr/local/share/smack/lib/smack.c|533|
+1 429 3 1 c
+1 429 6 18 main|harness.c|12|
+1 434 3 1 c
+1 434 6 18 main|harness.c|12|
+1 434 4 11 CALL malloc
+1 458 3 1 c
+1 458 6 18 main|harness.c|12|
+1 458 4 19 RETURN from malloc 
+1 459 3 1 c
+1 459 6 18 main|harness.c|12|
+1 462 3 1 c
+1 462 6 18 main|harness.c|13|
+1 464 3 1 c
+1 464 6 18 main|harness.c|13|
+1 464 4 11 CALL malloc
+1 488 3 1 c
+1 488 6 18 main|harness.c|13|
+1 488 4 19 RETURN from malloc 
+1 489 3 1 c
+1 489 6 18 main|harness.c|13|
+1 492 3 1 c
+1 492 6 18 main|harness.c|14|
+1 494 3 1 c
+1 494 6 18 main|harness.c|14|
+1 494 4 11 CALL malloc
+1 518 3 1 c
+1 518 6 18 main|harness.c|14|
+1 518 4 19 RETURN from malloc 
+1 519 3 1 c
+1 519 6 18 main|harness.c|14|
+1 522 3 1 c
+1 522 6 18 main|harness.c|15|
+1 524 3 1 c
+1 524 6 18 main|harness.c|15|
+1 524 4 11 CALL malloc
+1 548 3 1 c
+1 548 6 18 main|harness.c|15|
+1 548 4 19 RETURN from malloc 
+1 549 3 1 c
+1 549 6 18 main|harness.c|15|
+1 552 3 1 c
+1 552 6 18 main|harness.c|27|
+1 557 3 1 c
+1 557 6 18 main|harness.c|27|
+1 557 4 11 CALL malloc
+1 581 3 1 c
+1 581 6 18 main|harness.c|27|
+1 581 4 19 RETURN from malloc 
+1 582 3 1 c
+1 582 6 18 main|harness.c|27|
+1 587 3 1 c
+1 587 6 18 main|harness.c|27|
+1 587 4 32 CALL __SMACK_check_memory_safety
+1 592 3 1 c
+1 592 6 18 main|harness.c|27|
+1 592 4 40 RETURN from __SMACK_check_memory_safety 
+1 593 3 1 c
+1 593 6 18 main|harness.c|27|
+1 596 3 1 c
+1 596 6 18 main|harness.c|29|
+1 598 3 1 c
+1 598 6 18 main|harness.c|29|
+1 598 4 18 CALL WebSocketOpen
+1 599 3 1 c
+1 599 6 46 WebSocketOpen|websocket.c|7|main|harness.c|29|
+1 602 3 1 c
+1 602 6 46 WebSocketOpen|websocket.c|7|main|harness.c|29|
+1 602 4 11 CALL $alloc
+1 619 3 1 c
+1 619 6 46 WebSocketOpen|websocket.c|7|main|harness.c|29|
+1 619 4 19 RETURN from $alloc 
+1 620 3 1 c
+1 620 6 46 WebSocketOpen|websocket.c|7|main|harness.c|29|
+1 627 3 1 c
+1 627 6 46 WebSocketOpen|websocket.c|9|main|harness.c|29|
+1 632 3 1 c
+1 632 6 46 WebSocketOpen|websocket.c|9|main|harness.c|29|
+1 632 4 32 CALL __SMACK_check_memory_safety
+1 637 3 1 c
+1 637 6 46 WebSocketOpen|websocket.c|9|main|harness.c|29|
+1 637 4 40 RETURN from __SMACK_check_memory_safety 
+1 638 3 1 c
+1 638 6 46 WebSocketOpen|websocket.c|9|main|harness.c|29|
+1 645 3 1 c
+1 645 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 650 3 1 c
+1 650 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 650 4 32 CALL __SMACK_check_memory_safety
+1 655 3 1 c
+1 655 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 655 4 40 RETURN from __SMACK_check_memory_safety 
+1 656 3 1 c
+1 656 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 658 3 1 c
+1 658 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 658 4 32 CALL __SMACK_check_memory_safety
+1 663 3 1 c
+1 663 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 663 4 40 RETURN from __SMACK_check_memory_safety 
+1 664 3 1 c
+1 664 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 666 3 1 c
+1 666 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 666 4 15 CALL $memcpy.i8
+1 671 3 1 c
+1 671 6 47 WebSocketOpen|websocket.c|11|main|harness.c|29|
+1 671 4 23 RETURN from $memcpy.i8 
+1 672 3 1 c
+1 672 6 47 WebSocketOpen|websocket.c|12|main|harness.c|29|
+1 677 3 1 c
+1 677 6 47 WebSocketOpen|websocket.c|12|main|harness.c|29|
+1 677 4 32 CALL __SMACK_check_memory_safety
+1 682 3 1 c
+1 682 6 47 WebSocketOpen|websocket.c|12|main|harness.c|29|
+1 682 4 40 RETURN from __SMACK_check_memory_safety 
+1 683 3 1 c
+1 683 6 47 WebSocketOpen|websocket.c|12|main|harness.c|29|
+1 692 3 1 c
+1 692 6 47 WebSocketOpen|websocket.c|14|main|harness.c|29|
+1 697 3 1 c
+1 697 6 47 WebSocketOpen|websocket.c|14|main|harness.c|29|
+1 697 4 32 CALL __SMACK_check_memory_safety
+1 702 3 1 c
+1 702 6 47 WebSocketOpen|websocket.c|14|main|harness.c|29|
+1 702 4 40 RETURN from __SMACK_check_memory_safety 
+1 703 3 1 c
+1 703 6 47 WebSocketOpen|websocket.c|14|main|harness.c|29|
+1 709 3 1 c
+1 709 6 47 WebSocketOpen|websocket.c|15|main|harness.c|29|
+1 713 3 1 c
+1 713 6 18 main|harness.c|29|
+1 713 4 26 RETURN from WebSocketOpen 
+1 714 3 1 c
+1 714 6 18 main|harness.c|30|
+1 716 3 1 c
+1 716 6 18 main|harness.c|30|
+1 716 4 19 CALL WebSocketClose
+1 717 3 1 c
+1 717 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 725 3 1 c
+1 725 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 725 4 32 CALL __SMACK_check_memory_safety
+1 730 3 1 c
+1 730 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 730 4 40 RETURN from __SMACK_check_memory_safety 
+1 731 3 1 c
+1 731 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 739 3 1 c
+1 739 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 739 4 32 CALL __SMACK_check_memory_safety
+1 744 3 1 c
+1 744 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 744 4 40 RETURN from __SMACK_check_memory_safety 
+1 745 3 1 c
+1 745 6 48 WebSocketClose|websocket.c|20|main|harness.c|30|
+1 761 3 1 c
+1 761 6 48 WebSocketClose|websocket.c|21|main|harness.c|30|
+1 765 3 1 c
+1 765 6 18 main|harness.c|30|
+1 765 4 27 RETURN from WebSocketClose 
+1 766 3 1 c
+1 766 6 18 main|harness.c|31|
+1 768 3 1 c
+1 768 6 18 main|harness.c|31|
+1 768 4 19 CALL WebSocketError
+1 769 3 1 c
+1 769 6 48 WebSocketError|websocket.c|26|main|harness.c|31|
+1 778 3 1 c
+1 778 6 48 WebSocketError|websocket.c|27|main|harness.c|31|
+1 782 3 1 c
+1 782 6 18 main|harness.c|31|
+1 782 4 27 RETURN from WebSocketError 
+1 783 3 1 c
+1 783 6 18 main|harness.c|32|
+1 785 3 1 c
+1 785 6 18 main|harness.c|32|
+1 785 4 21 CALL WebSocketMessage
+1 786 3 1 c
+1 786 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 797 3 1 c
+1 797 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 797 4 32 CALL __SMACK_check_memory_safety
+1 802 3 1 c
+1 802 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 802 4 40 RETURN from __SMACK_check_memory_safety 
+1 803 3 1 c
+1 803 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 811 3 1 c
+1 811 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 811 4 32 CALL __SMACK_check_memory_safety
+1 816 3 1 c
+1 816 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 816 4 40 RETURN from __SMACK_check_memory_safety 
+1 817 3 1 c
+1 817 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 825 3 1 c
+1 825 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 825 4 32 CALL __SMACK_check_memory_safety
+1 830 3 1 c
+1 830 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 830 4 40 RETURN from __SMACK_check_memory_safety 
+1 831 3 1 c
+1 831 6 50 WebSocketMessage|websocket.c|32|main|harness.c|32|
+1 837 3 1 c
+1 837 6 50 WebSocketMessage|websocket.c|33|main|harness.c|32|
+1 842 3 1 c
+1 842 6 50 WebSocketMessage|websocket.c|33|main|harness.c|32|
+1 842 4 32 CALL __SMACK_check_memory_safety
+1 847 3 1 c
+1 847 6 50 WebSocketMessage|websocket.c|33|main|harness.c|32|
+1 847 4 40 RETURN from __SMACK_check_memory_safety 
+1 848 3 1 c
+1 848 6 50 WebSocketMessage|websocket.c|33|main|harness.c|32|
+1 859 3 1 c
+1 859 6 50 WebSocketMessage|websocket.c|37|main|harness.c|32|
+1 862 3 1 c
+1 862 6 50 WebSocketMessage|websocket.c|38|main|harness.c|32|
+1 865 3 1 c
+1 865 6 49 WebSocketMessage|websocket.c|0|main|harness.c|32|
+1 867 3 1 c
+1 867 6 50 WebSocketMessage|websocket.c|38|main|harness.c|32|
+1 872 3 1 c
+1 872 6 50 WebSocketMessage|websocket.c|38|main|harness.c|32|
+1 872 4 32 CALL __SMACK_check_memory_safety
+1 877 3 1 c
+1 877 6 50 WebSocketMessage|websocket.c|38|main|harness.c|32|
+1 877 4 40 RETURN from __SMACK_check_memory_safety 
+1 878 3 1 c
+1 878 6 50 WebSocketMessage|websocket.c|38|main|harness.c|32|
+1 889 3 1 c
+1 889 6 50 WebSocketMessage|websocket.c|40|main|harness.c|32|
+1 892 3 1 c
+1 892 6 50 WebSocketMessage|websocket.c|42|main|harness.c|32|
+1 897 3 1 c
+1 897 6 50 WebSocketMessage|websocket.c|42|main|harness.c|32|
+1 897 4 32 CALL __SMACK_check_memory_safety
+1 902 3 1 c
+1 902 6 50 WebSocketMessage|websocket.c|42|main|harness.c|32|
+1 902 4 40 RETURN from __SMACK_check_memory_safety 
+1 903 3 1 c
+1 903 6 50 WebSocketMessage|websocket.c|42|main|harness.c|32|
+1 909 3 1 c
+1 909 6 50 WebSocketMessage|websocket.c|43|main|harness.c|32|
+1 911 3 1 c
+1 911 6 50 WebSocketMessage|websocket.c|43|main|harness.c|32|
+1 911 4 9 CALL exit
+1 912 3 1 c
+1 912 6 94 exit|/usr/local/share/smack/lib/stdlib.c|10|WebSocketMessage|websocket.c|43|main|harness.c|32|
+1 917 3 1 c
+1 917 6 94 exit|/usr/local/share/smack/lib/stdlib.c|10|WebSocketMessage|websocket.c|43|main|harness.c|32|
+1 917 4 66 ASSERTION FAILS assert {:valid_memtrack} $allocatedCounter == 0;
+ 
+1 918 3 1 c
+1 918 6 50 WebSocketMessage|websocket.c|43|main|harness.c|32|
+1 918 4 17 RETURN from exit 
+1 919 3 1 c
+1 919 6 18 main|harness.c|32|
+1 919 4 29 RETURN from WebSocketMessage 
+1 920 3 1 c
+1 920 6 18 main|harness.c|32|
+1 920 4 4 Done
