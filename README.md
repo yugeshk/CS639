@@ -37,9 +37,17 @@ Running some files might need additional include paths, add them like
 --clang-options="`emcc --cflags` -I<include/path>"
 ```
 
+### Angelic Verifier
+To run AV on any file, first compile it to boogie as above. Then:
+```
+bash <scripts_folder>/prepHarness.sh <file_name>.bpl
+mono `which AvHarnessInstrumentation.exe` <file_name>.bpl <file_name>.harness.bpl
+mono `which AngelicVerifierNull.exe` <file_name>.harness.bpl
+```
+
 ## Running Benchmarks
 
-For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments. We already provide 
+For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments. We already provide compiled boogie (`.bpl`) files. If you need compilation instructions, some boogie files will indicate them at the start of the file. For those that do not, feel free to contact [yugeshk](mailto:yugeshk@iitk.ac.in) or [baldip](malito:baldip@iitk.ac.in) or try figuring it out yourself.
 
 #### Vanilla Corral
 
