@@ -32,7 +32,32 @@ To compile a C/C++ source (that uses emsdk) to LLVM IR and then to boogie:
 $ clang++ `em++ --cflags` -emit-llvm -S <filename>.cpp -o <filename>.ll
 $ smack --no-verify --clang-options="`em++ --cflags`" -bpl <filename>.bpl <filename>.ll
 ```
+Running some files might need additional include paths, add them like 
+```
+--clang-options="`emcc --cflags` -I<include/path>"
+```
 
 ## Running Benchmarks
 
-For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments.
+For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments. We already provide 
+
+#### Vanilla Corral
+
+Use the `.bpl` file provided in folders `baseline_corral`
+
+```
+corral /cex:10 /tryCTrace <file_name>.bpl
+```
+
+#### Corral with stubs
+Use the `.bpl` file provided in folders `corral_with_stubs`. Some folders will contain a file `harness.bpl`, use that instead of the default filename.
+
+```
+corral /cex:10 /tryCTrace <file_name>.bpl
+```
+
+#### AV
+Use the `.av.bpl` file provided in folders `av`. 
+```
+mono `which AngelicVerifierNull.exe` <file_name>.av.bpl /copt:tryCTrace
+```
