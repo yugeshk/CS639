@@ -47,7 +47,7 @@ mono `which AngelicVerifierNull.exe` <file_name>.harness.bpl
 
 ## Running Benchmarks
 
-For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments. We already provide compiled boogie (`.bpl`) files. If you need compilation instructions, some boogie files will indicate them at the start of the file. For those that do not, feel free to contact [yugeshk](mailto:yugeshk@iitk.ac.in) or [baldip](malito:baldip@iitk.ac.in) or try figuring it out yourself.
+For cleanliness purposes, it is recommneded to copy an individual benchmark to a separate folder before running experiments. We already provide compiled boogie (`.bpl`) files. If you need compilation instructions, some boogie files will indicate them at the start of the file. For those that do not, feel free to contact [yugeshk](mailto:yugeshk@iitk.ac.in) or [baldip](mailto:baldip@iitk.ac.in) or try figuring it out yourself.
 
 #### Vanilla Corral
 
